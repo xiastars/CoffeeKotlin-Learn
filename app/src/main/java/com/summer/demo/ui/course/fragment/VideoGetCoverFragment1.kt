@@ -4,8 +4,6 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.widget.EditText
-import butterknife.BindView
-import butterknife.OnClick
 import com.summer.demo.R
 import com.summer.demo.module.base.BaseFragment
 import com.summer.demo.view.CommonSureView5
@@ -18,10 +16,8 @@ import java.io.File
  * @CreateDate: 2019/10/14 9:31
  */
 class VideoGetCoverFragment : BaseFragment(), View.OnClickListener {
-    @BindView(R.id.edt_content)
-    internal var edtContent: EditText? = null
-    @BindView(R.id.btn_sure)
-    internal var btnSure: CommonSureView5? = null
+    internal val edtContent: EditText by Bind(R.id.edt_content)
+    internal val btnSure: CommonSureView5  by Bind(R.id.btn_sure,true)
 
     override fun initView(view: View) {
         edtContent!!.addTextChangedListener(object : TextWatcher {
@@ -51,7 +47,6 @@ class VideoGetCoverFragment : BaseFragment(), View.OnClickListener {
         return R.layout.fragment_video_frame
     }
 
-    @OnClick(R.id.btn_sure)
     override fun onClick(v: View) {
         when (v.id) {
             R.id.btn_sure -> {

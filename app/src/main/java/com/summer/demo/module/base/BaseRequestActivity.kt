@@ -13,7 +13,6 @@ import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
-import butterknife.ButterKnife
 import com.summer.demo.R
 import com.summer.demo.bean.BaseResp
 import com.summer.demo.constant.ApiConstants
@@ -102,7 +101,6 @@ abstract class BaseRequestActivity : SwipeBackActivity() ,View.OnClickListener {
 
         }
         initContentView()
-        ButterKnife.bind(this)
         initPresenter()
         initData()
 

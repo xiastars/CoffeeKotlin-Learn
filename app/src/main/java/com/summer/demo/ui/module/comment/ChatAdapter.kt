@@ -9,8 +9,6 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.RelativeLayout
 import android.widget.TextView
-import butterknife.BindView
-import butterknife.ButterKnife
 import com.summer.demo.R
 import com.summer.demo.bean.UserInfo
 import com.summer.demo.dialog.BaseTipsDialog
@@ -95,7 +93,7 @@ class ChatAdapter(context: Context, internal var selfInfo: UserInfo, internal va
                 override fun onCancel() {}
             })
             baseTipsDialog.hideTitle()
-            baseTipsDialog.setOkContent("重发")
+            baseTipsDialog.okContent = "重发"
             baseTipsDialog.show()
         }
     }
@@ -124,39 +122,21 @@ class ChatAdapter(context: Context, internal var selfInfo: UserInfo, internal va
     }
 
     internal class SelfHolder(view: View) : RecyclerView.ViewHolder(view) {
-        @BindView(R.id.iv_avatar)
-        var ivAvatar: RoundAngleImageView? = null
-        @BindView(R.id.tv_content)
-        var tvContent: TextView? = null
-        @BindView(R.id.pb_loading)
-        var pbLoading: ProgressBar? = null
-        @BindView(R.id.iv_error)
-        var ivError: ImageView? = null
-        @BindView(R.id.tv_time)
-        var tvTime: TextView? = null
-
-        init {
-            ButterKnife.bind(this, view)
-        }
+        var ivAvatar: RoundAngleImageView  = view.findViewById(R.id.iv_avatar)
+        var tvContent: TextView  = view.findViewById(R.id.tv_content)
+        var pbLoading: ProgressBar  = view.findViewById(R.id.pb_loading)
+        var ivError: ImageView  = view.findViewById(R.id.iv_error)
+        var tvTime: TextView  = view.findViewById(R.id.tv_time)
     }
 
     internal class OtherHolder(view: View) : RecyclerView.ViewHolder(view) {
-        @BindView(R.id.iv_avatar)
-        var ivAvatar: RoundAngleImageView? = null
-        @BindView(R.id.tv_content)
-        var tvContent: TextView? = null
-        @BindView(R.id.pb_loading)
-        var pbLoading: ProgressBar? = null
-        @BindView(R.id.iv_error)
-        var ivError: ImageView? = null
-        @BindView(R.id.rl_left)
-        var rlLeft: RelativeLayout? = null
-        @BindView(R.id.tv_time)
-        var tvTime: TextView? = null
+        var ivAvatar: RoundAngleImageView = view.findViewById(R.id.iv_avatar)
+        var tvContent: TextView = view.findViewById(R.id.tv_content)
+        var pbLoading: ProgressBar = view.findViewById(R.id.pb_loading)
+        var ivError: ImageView = view.findViewById(R.id.iv_error)
+        var rlLeft: RelativeLayout = view.findViewById(R.id.rl_left)
+        var tvTime: TextView = view.findViewById(R.id.tv_time)
 
-        init {
-            ButterKnife.bind(this, view)
-        }
     }
 
     companion object {

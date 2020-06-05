@@ -9,8 +9,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.ToggleButton
-import butterknife.BindView
-import butterknife.ButterKnife
 import com.summer.demo.R
 import com.summer.demo.module.album.util.ImageItem
 import com.summer.helper.adapter.SRecycleAdapter
@@ -91,19 +89,11 @@ class AlbumGridViewAdapter(private val mContext: Context, private var dataList: 
     }
 
     internal inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        @BindView(R.id.image_view)
-        var imageView: ImageView? = null
-        @BindView(R.id.toggle_button)
-        var toggleButton: ToggleButton? = null
-        @BindView(R.id.choosedbt)
-        var choosedbt: ImageView? = null
-        @BindView(R.id.toggle)
-        var toggle: RelativeLayout? = null
-        @BindView(R.id.rl_parent)
-        var rlParent: RelativeLayout? = null
+        var imageView: ImageView = view.findViewById(R.id.image_view)
+        var toggleButton: ToggleButton  = view.findViewById(R.id.toggle_button)
+        var choosedbt: ImageView  = view.findViewById(R.id.choosedbt)
 
         init {
-            ButterKnife.bind(this, view)
             val params = imageView!!.layoutParams as RelativeLayout.LayoutParams
             params.width = (SUtils.screenWidth - SUtils.getDip(mContext, 12)) / 3
             params.height = params.width

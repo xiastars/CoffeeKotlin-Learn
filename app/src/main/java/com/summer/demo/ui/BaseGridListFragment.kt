@@ -4,7 +4,6 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.view.KeyEvent
 import android.view.View
-import butterknife.BindView
 import com.summer.demo.R
 import com.summer.demo.adapter.CommonGridAdapter
 import com.summer.demo.module.base.BaseActivity
@@ -20,8 +19,8 @@ import java.util.*
  * @CreateDate: 2019/6/10 18:00
  */
 abstract class BaseGridListFragment : BaseActivity() {
-    @BindView(R.id.nv_container)
-    internal var nvContainer: NRecycleView? = null
+
+    internal val nvContainer: NRecycleView by Bind(R.id.nv_container)
     internal lateinit var fragmentManager: FragmentManager
     /* 当前显示的Fragment */
     internal var mFragment: BaseFragment? = null

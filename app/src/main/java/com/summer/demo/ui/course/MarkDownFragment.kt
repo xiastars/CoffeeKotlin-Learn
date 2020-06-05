@@ -3,7 +3,6 @@ package com.summer.demo.ui.course
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import butterknife.BindView
 import com.summer.demo.R
 import com.summer.demo.module.base.BaseFragment
 import com.summer.helper.utils.SUtils
@@ -15,8 +14,7 @@ import com.zzhoujay.richtext.RichText
  * @CreateDate: 2019/6/10 15:03
  */
 class MarkDownFragment : BaseFragment() {
-    @BindView(R.id.tv_content)
-    internal var tvContent: TextView? = null
+    internal val tvContent: TextView by Bind(R.id.tv_content)
 
 
     override fun setContentView(): Int {

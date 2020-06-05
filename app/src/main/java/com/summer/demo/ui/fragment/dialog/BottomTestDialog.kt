@@ -17,7 +17,7 @@ class BottomTestDialog(context: Context) : BaseBottomDialog(context) {
         return R.layout.dialog_bottom_test
     }
 
-    override fun initView(view: View) {
+    override fun initView(view: View?) {
 
     }
 }

@@ -1,7 +1,6 @@
 package com.summer.demo.ui.view.customfragment
 
 import android.view.View
-import butterknife.BindView
 import com.summer.demo.R
 import com.summer.demo.module.base.BaseFragment
 import com.summer.helper.view.NRecycleView
@@ -12,11 +11,10 @@ import com.summer.helper.view.NRecycleView
  * @CreateDate: 2019/10/10 16:38
  */
 class ListItemFragment : BaseFragment() {
-    @BindView(R.id.sv_container)
-    internal var nvContainer: NRecycleView? = null
+    internal val nvContainer: NRecycleView by Bind(R.id.sv_container)
 
     override fun initView(view: View) {
-        nvContainer!!.setList()
+        nvContainer.setList()
     }
 
     override fun dealDatas(requestType: Int, obj: Any) {

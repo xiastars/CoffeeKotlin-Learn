@@ -26,7 +26,6 @@ class CalendarView : FrameLayout, ViewGroup.OnHierarchyChangeListener {
     internal var cells: MutableMap<String, CheckCellInfo>? = HashMap()
 
     internal var ismOnDraw: Boolean = false
-    internal lateinit var layoutParam: ViewGroup.LayoutParams
 
     internal lateinit var downPoint: Point
     internal var cellWith: Int = 0
@@ -62,7 +61,6 @@ class CalendarView : FrameLayout, ViewGroup.OnHierarchyChangeListener {
     }
 
     private fun init() {
-        layoutParam = layoutParams
         mPaint = Paint()
         mPaint.isAntiAlias = true
         mPaint.textAlign = Paint.Align.CENTER

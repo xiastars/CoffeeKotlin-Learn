@@ -15,7 +15,6 @@ import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
-import butterknife.ButterKnife
 import com.summer.demo.R
 import com.summer.demo.constant.ApiConstants
 import com.summer.demo.helper.PlayAudioHelper
@@ -98,7 +97,6 @@ abstract class BaseFragmentActivity : SwipeBackActivity() {
 
         }*/
         initView()
-        ButterKnife.bind(this)
         initData()
     }
 

@@ -1,7 +1,6 @@
 package com.summer.demo.ui.fragment
 
 import android.view.View
-import butterknife.BindView
 import com.summer.demo.R
 import com.summer.demo.module.base.BaseFragment
 import com.summer.demo.view.CanvasAnimView
@@ -15,20 +14,17 @@ import com.summer.helper.utils.SUtils
  */
 class ObjectAnimFragment : BaseFragment() {
 
-    @BindView(R.id.view_left)
-    internal var viewLeft: View? = null
-    @BindView(R.id.view_top)
-    internal var viewTop: View? = null
-    @BindView(R.id.view_right)
-    internal var viewRight: View? = null
-    @BindView(R.id.view_bottom)
-    internal var viewBottom: View? = null
-    @BindView(R.id.view_center)
-    internal var viewCenter: View? = null
-    @BindView(R.id.canvas_anim)
-    internal var canvasAnimView: CanvasAnimView? = null
-    @BindView(R.id.view_rotate)
-    internal var vRotate: View? = null
+    internal val viewLeft: View by Bind(R.id.view_left)
+
+    internal val viewTop: View by Bind(R.id.view_top)
+
+    internal val viewRight: View by Bind(R.id.view_right)
+
+    internal val viewBottom: View by Bind(R.id.view_bottom)
+
+    internal val canvasAnimView: CanvasAnimView by Bind(R.id.canvas_anim)
+
+    internal val vRotate: View by Bind(R.id.view_rotate)
 
     override fun initView(view: View) {
         showLeftAnim()

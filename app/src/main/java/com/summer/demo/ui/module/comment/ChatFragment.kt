@@ -9,8 +9,6 @@ import android.text.TextWatcher
 import android.view.View
 import android.widget.EditText
 import android.widget.RelativeLayout
-import butterknife.BindView
-import butterknife.OnClick
 import com.summer.demo.R
 import com.summer.demo.bean.UserInfo
 import com.summer.demo.module.base.BaseFragment
@@ -28,18 +26,12 @@ import java.util.*
  */
 class ChatFragment : BaseFragment(), View.OnClickListener {
 
-    @BindView(R.id.sv_container)
-    internal var svContainer: NRecycleView? = null
-    @BindView(R.id.btn_send)
-    internal var btnSend: CommonSureView5? = null
-    @BindView(R.id.edt_comment)
-    internal var edtComment: EditText? = null
-    @BindView(R.id.rl_edit_parent)
-    internal var rlEditParent: RelativeLayout? = null
-    @BindView(R.id.ll_parent)
-    internal var llParent: RelativeLayout? = null
-    @BindView(R.id.rl_comment_parent)
-    internal var rlCommentParent: RelativeLayout? = null
+    internal val svContainer: NRecycleView by Bind(R.id.sv_container)
+    internal val btnSend: CommonSureView5 by Bind(R.id.sv_container,true)
+    internal val edtComment: EditText by Bind(R.id.sv_container)
+    internal val rlEditParent: RelativeLayout by Bind(R.id.sv_container)
+    internal val llParent: RelativeLayout by Bind(R.id.sv_container)
+    internal val rlCommentParent: RelativeLayout by Bind(R.id.sv_container)
     internal var userId = ""
     internal lateinit var groupId: String
 
@@ -194,8 +186,6 @@ class ChatFragment : BaseFragment(), View.OnClickListener {
         }
     }
 
-
-    @OnClick(R.id.btn_send)
     override fun onClick(v: View) {
         when (v.id) {
             R.id.btn_send -> {

@@ -1,7 +1,6 @@
 package com.summer.demo.ui.view.customfragment
 
 import android.view.View
-import butterknife.BindView
 import com.summer.demo.R
 import com.summer.demo.bean.BookBean
 import com.summer.demo.module.base.BaseFragment
@@ -15,8 +14,7 @@ import java.util.*
  * @CreateDate: 2019/10/10 17:07
  */
 class GalleryFragment : BaseFragment() {
-    @BindView(R.id.gallery_view)
-    internal var galleryView: GalleryView? = null
+    internal val galleryView: GalleryView by Bind(R.id.gallery_view)
 
     override fun initView(view: View) {
         val mFunQuestionAdapter = FunQuestionGalleryAdapter(context!!)

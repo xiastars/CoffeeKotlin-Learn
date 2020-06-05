@@ -1,7 +1,6 @@
 package com.summer.demo.module.video
 
 import android.animation.ValueAnimator
-import android.content.Context
 import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
@@ -15,71 +14,36 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewConfiguration
 import android.view.animation.LinearInterpolator
-import android.widget.FrameLayout
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.RelativeLayout
-import android.widget.TextView
-import android.widget.Toast
-
+import android.widget.*
 import com.summer.demo.R
 import com.summer.demo.module.album.util.ImageItem
 import com.summer.demo.module.base.BaseActivity
-import com.summer.demo.module.video.util.CompressListener
-import com.summer.demo.module.video.util.Compressor
-import com.summer.demo.module.video.util.EditSpacingItemDecoration
-import com.summer.demo.module.video.util.ExtractFrameWorkThread
-import com.summer.demo.module.video.util.ExtractVideoInfoUtil
-import com.summer.demo.module.video.util.InitListener
-import com.summer.demo.module.video.util.MyVideoView
-import com.summer.demo.module.video.util.OnTrimVideoListener
-import com.summer.demo.module.video.util.PictureUtils
-import com.summer.demo.module.video.util.RangeSeekBar
-import com.summer.demo.module.video.util.TrimVideoUtils
-import com.summer.demo.module.video.util.VideoEditInfo
+import com.summer.demo.module.video.util.*
 import com.summer.demo.view.CommonSureView5
 import com.summer.helper.permission.PermissionUtils
-import com.summer.helper.utils.JumpTo
-import com.summer.helper.utils.Logs
-import com.summer.helper.utils.SFileUtils
-import com.summer.helper.utils.STimeUtils
-import com.summer.helper.utils.SUtils
+import com.summer.helper.utils.*
 import com.summer.helper.view.LoadingDialog
 import com.summer.helper.view.review.RRelativeLayout
-
 import java.io.File
 import java.io.IOException
 import java.lang.ref.WeakReference
-import java.util.ArrayList
+import java.util.*
 
-import butterknife.BindView
-import butterknife.ButterKnife
-import butterknife.OnClick
 
 /**
  * 视频编辑界面
  */
 class VideoEditActivity : BaseActivity() {
-    @BindView(R.id.btn_right)
-    internal var btnRight: CommonSureView5? = null
-    @BindView(R.id.title)
-    internal var title: RRelativeLayout? = null
-    @BindView(R.id.uVideoView)
-    internal var mVideoView: MyVideoView? = null
-    @BindView(R.id.id_rv_id)
-    internal var mRecyclerView: RecyclerView? = null
-    @BindView(R.id.positionIcon)
-    internal var positionIcon: ImageView? = null
-    @BindView(R.id.id_seekBarLayout)
-    internal var seekBarLayout: LinearLayout? = null
-    @BindView(R.id.layout_bottom)
-    internal var layoutBottom: FrameLayout? = null
-    @BindView(R.id.tv_edit_video)
-    internal var tvEditVideo: TextView? = null
-    @BindView(R.id.rl_edtview)
-    internal var rlEdtview: RelativeLayout? = null
-    @BindView(R.id.tv_video_time)
-    internal var tvVideoTime: TextView? = null
+    private val btnRight: CommonSureView5 by Bind(R.id.btn_right,true)
+    internal val title: RRelativeLayout by Bind(R.id.title)
+    internal val mVideoView: MyVideoView by Bind(R.id.uVideoView)
+    internal val mRecyclerView: RecyclerView by Bind(R.id.id_rv_id)
+    internal val positionIcon: ImageView by Bind(R.id.positionIcon)
+    internal val seekBarLayout: LinearLayout by Bind(R.id.id_seekBarLayout)
+    internal val layoutBottom: FrameLayout by Bind(R.id.layout_bottom)
+
+    internal val rlEdtview: RelativeLayout by Bind(R.id.rl_edtview)
+    internal val tvVideoTime: TextView by Bind(R.id.tv_video_time)
 
     private var mExtractVideoInfoUtil: ExtractVideoInfoUtil? = null
     internal var loadingDialog: LoadingDialog? = null
@@ -219,7 +183,21 @@ class VideoEditActivity : BaseActivity() {
     }
 
     override fun onClick(v: View?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        when (v!!.id) {
+            R.id.ll_back -> this.finish()
+            R.id.tv_edit_video -> {
+                rlEdtview!!.visibility = View.GONE
+                layoutBottom!!.visibility = View.VISIBLE
+                tvVideoTime!!.visibility = View.VISIBLE
+            }
+            R.id.btn_right -> {
+                if (!finishEnable) {
+                    SUtils.makeToast(context, "请先编辑视频!")
+                    return
+                }
+                compressVideo()
+            }
+        }
     }
 
     override fun setTitleId(): Int {
@@ -231,7 +209,6 @@ class VideoEditActivity : BaseActivity() {
     }
 
     override fun initData() {
-        ButterKnife.bind(this)
         context = this
         btnRight!!.visibility = View.VISIBLE
         btnRight!!.changeStyle(true)
@@ -397,24 +374,7 @@ class VideoEditActivity : BaseActivity() {
         animator!!.start()
     }
 
-    @OnClick(R.id.ll_back, R.id.tv_edit_video, R.id.btn_right)
-    fun onViewClicked(view: View) {
-        when (view.id) {
-            R.id.ll_back -> this.finish()
-            R.id.tv_edit_video -> {
-                rlEdtview!!.visibility = View.GONE
-                layoutBottom!!.visibility = View.VISIBLE
-                tvVideoTime!!.visibility = View.VISIBLE
-            }
-            R.id.btn_right -> {
-                if (!finishEnable) {
-                    SUtils.makeToast(context, "请先编辑视频!")
-                    return
-                }
-                compressVideo()
-            }
-        }
-    }
+
 
     /**
      * 裁剪和压缩视频

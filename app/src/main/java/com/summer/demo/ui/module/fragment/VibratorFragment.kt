@@ -6,7 +6,7 @@ import android.os.VibrationEffect
 import android.os.Vibrator
 import android.support.annotation.RequiresApi
 import android.view.View
-import butterknife.OnClick
+import android.widget.Button
 import com.summer.demo.AppContext
 import com.summer.demo.R
 import com.summer.demo.module.base.BaseFragment
@@ -18,6 +18,9 @@ import com.summer.demo.module.base.BaseFragment
  */
 class VibratorFragment : BaseFragment(), View.OnClickListener {
     internal lateinit var vibrator: Vibrator
+
+    private val btnVibrate : Button by Bind(R.id.btn_virate,true)
+    private val btnCancel : Button by Bind(R.id.btn_cancel,true)
 
     internal var mVibratePattern1 = longArrayOf(0, 90, 10, 90, 10, 90, 10, 90, 10, 90, 10, 90, 10, 90, 10, 90)
     internal var mVibratePattern2 = longArrayOf(0, 80, 20, 80, 20, 80, 20, 80, 20, 80, 20, 80, 20, 80, 20, 80)
@@ -50,7 +53,6 @@ class VibratorFragment : BaseFragment(), View.OnClickListener {
         return R.layout.fragment_vibrate
     }
 
-    @OnClick(R.id.btn_virate, R.id.btn_cancel)
     override fun onClick(v: View) {
         when (v.id) {
             R.id.btn_virate -> if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

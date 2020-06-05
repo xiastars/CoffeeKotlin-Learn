@@ -3,21 +3,17 @@ package com.summer.demo.ui.fragment
 import android.app.Dialog
 import android.view.Gravity
 import android.view.View
-import android.view.Window
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
-
 import com.summer.demo.R
-import com.summer.demo.module.base.BaseFragment
 import com.summer.demo.dialog.BaseTipsDialog
 import com.summer.demo.dialog.DialogWeixin
 import com.summer.demo.dialog.LoadingDialog
+import com.summer.demo.module.base.BaseFragment
 import com.summer.demo.ui.fragment.dialog.BottomTestDialog
+import com.summer.helper.utils.Logs
 import com.summer.helper.utils.SUtils
-
-import butterknife.BindView
-import butterknife.OnClick
 
 /**
  * Dialog的用法
@@ -26,20 +22,13 @@ import butterknife.OnClick
  */
 class MyDialogFragment : BaseFragment(), View.OnClickListener {
     internal var dialog: Dialog? = null
-    @BindView(R.id.iv_bg)
-    internal var ivBg: ImageView? = null
-    @BindView(R.id.btn_common)
-    internal var btnCommon: Button? = null
-    @BindView(R.id.btn_longer)
-    internal var btnLonger: Button? = null
-    @BindView(R.id.btn_special)
-    internal var btnSpecial: Button? = null
-    @BindView(R.id.btn4)
-    internal var btn4: Button? = null
-    @BindView(R.id.btn5)
-    internal var btn5: Button? = null
-    @BindView(R.id.btn6)
-    internal var btn6: Button? = null
+    internal val ivBg: ImageView by Bind(R.id.iv_bg)
+    internal val btnCommon: Button by Bind(R.id.btn_common,true)
+    internal val btnLonger: Button by Bind(R.id.btn_longer,true)
+    internal val btnSpecial: Button by Bind(R.id.btn_special,true)
+    internal val btn4: Button  by Bind(R.id.btn4,true)
+    internal val btn5: Button  by Bind(R.id.btn5,true)
+    internal val btn6: Button  by Bind(R.id.btn6,true)
 
 
     public override fun initView(view: View) {
@@ -65,8 +54,8 @@ class MyDialogFragment : BaseFragment(), View.OnClickListener {
         return R.layout.fragment_dialog
     }
 
-    @OnClick(R.id.btn_common, R.id.btn_special, R.id.btn_longer, R.id.btn4, R.id.btn5, R.id.btn6)
     override fun onClick(v: View) {
+        Logs.i("v"+v)
         when (v.id) {
             R.id.btn_common -> {
                 val dialog = Dialog(context!!, R.style.TagFullScreenDialog)
@@ -93,7 +82,7 @@ class MyDialogFragment : BaseFragment(), View.OnClickListener {
                 dialog1.startLoading()
             }
             R.id.btn4 -> {
-                val weixin = DialogWeixin(context)
+                val weixin = DialogWeixin(context!!)
                 weixin.show()
             }
             R.id.btn6 -> {

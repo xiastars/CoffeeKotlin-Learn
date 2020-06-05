@@ -7,9 +7,7 @@ import android.os.Bundle
 import android.support.v4.view.ViewPager
 import android.view.View
 import android.widget.*
-import butterknife.BindView
 import com.summer.demo.R
-import com.summer.demo.module.base.swipe.SwipeBackActivityHelper
 import com.summer.helper.recycle.MaterialRefreshLayout
 import com.summer.helper.recycle.MaterialRefreshListener
 import com.summer.helper.recycle.NestefreshLayout
@@ -24,39 +22,21 @@ import com.summer.helper.view.ScrollableLayout
 
 abstract class BaseNestedFragmentActivity : BaseFragmentActivity() {
 
-    private val mHelper: SwipeBackActivityHelper? = null
-    @BindView(R.id.ll_nested_container)
-    internal var llNestedContainer: LinearLayout? = null
-    @BindView(R.id.pagerStrip)
-    var pagerStrip: PagerSlidingTabStrip? = null
-    @BindView(R.id.rl_pager)
-    internal var rlPager: RelativeLayout? = null
-    @BindView(R.id.viewpager)
-    var viewpager: ViewPager? = null
-    @BindView(R.id.scrollableLayout)
-    var scrollableLayout: ScrollableLayout? = null
-    @BindView(R.id.refreshlayout)
-    internal var refreshlayout: NestefreshLayout? = null
-    @BindView(R.id.iv_nav)
-    internal var ivNav: ImageView? = null
-    @BindView(R.id.tv_hint_content)
-    internal var tvHintContent: TextView? = null
-    @BindView(R.id.iv_back)
-    internal var ivBack: ImageView? = null
-    @BindView(R.id.ll_back)
-    internal var llBack: LinearLayout? = null
-    @BindView(R.id.btn_edit_profile)
-    var btnEditProfile: Button? = null
-    @BindView(R.id.btn_share)
-    internal var btnShare: Button? = null
-    @BindView(R.id.rl_back)
-    internal var rlBack: RelativeLayout? = null
-    @BindView(R.id.rl_main_top)
-    internal var rlMainTop: RelativeLayout? = null
-    @BindView(R.id.line_title)
-    internal var lineTitle: View? = null
-    @BindView(R.id.tv_nest_title)
-    internal var tvNestTitle: TextView? = null
+    private val llNestedContainer: LinearLayout by Bind(R.id.ll_nested_container)
+    private val pagerStrip: PagerSlidingTabStrip by Bind(R.id.pagerStrip)
+    private val rlPager: RelativeLayout by Bind(R.id.rl_pager)
+    private val scrollableLayout: ScrollableLayout by Bind(R.id.scrollableLayout)
+    private val refreshlayout: NestefreshLayout by Bind(R.id.refreshlayout)
+    private val ivBack: ImageView by Bind(R.id.iv_back)
+    private val btnEditProfile: Button by Bind(R.id.btn_edit_profile)
+    private val btnShare: Button by Bind(R.id.btn_share)
+    private val rlBack: RelativeLayout by Bind(R.id.rl_back)
+    private val rlMainTop: RelativeLayout by Bind(R.id.rl_main_top)
+    private val lineTitle: View by Bind(R.id.line_title)
+    private val tvNestTitle: TextView by Bind(R.id.tv_nest_title)
+    private val viewpager: ViewPager  by Bind(R.id.viewpager)
+    private val llBack: LinearLayout by Bind(R.id.ll_back)
+
 
 
     internal var onScrollListener: ScrollableLayout.OnScrollListener? = null

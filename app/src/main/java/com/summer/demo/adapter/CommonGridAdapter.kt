@@ -38,7 +38,7 @@ class CommonGridAdapter : SRecycleMoreAdapter {
         vh.ivBg!!.setBackgroundResource(moduleInfo.res)
         vh.itemView.setOnClickListener {
             if (onSimpleClickListener != null) {
-                onSimpleClickListener!!.onClick(moduleInfo.pos)
+                onSimpleClickListener!!.onClick(position)
             }
         }
 

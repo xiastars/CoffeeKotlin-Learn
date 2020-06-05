@@ -3,7 +3,6 @@ package com.summer.demo.ui.module.fragment.socket
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import butterknife.BindView
 import com.summer.demo.R
 import com.summer.demo.module.base.BaseFragment
 
@@ -13,12 +12,9 @@ import com.summer.demo.module.base.BaseFragment
  * @CreateDate: 2019/10/31 17:36
  */
 class SocketFragment : BaseFragment() {
-    @BindView(R.id.iv_nav)
-    internal var ivNav: ImageView? = null
-    @BindView(R.id.tv_hint_content)
-    internal var tvHintContent: TextView? = null
-    @BindView(R.id.tv_reload)
-    internal var tvReload: TextView? = null
+    internal val ivNav: ImageView by Bind(R.id.iv_nav)
+    internal val tvHintContent: TextView by Bind(R.id.tv_hint_content)
+    internal val tvReload: TextView by Bind(R.id.tv_reload)
 
     override fun initView(view: View) {
 

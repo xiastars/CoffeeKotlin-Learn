@@ -81,7 +81,7 @@ object FFMepgHelper {
             }
         })
         tipDialog.hideTitle()
-        tipDialog.setOkContent("下载")
+        tipDialog.okContent = "下载"
         tipDialog.show()
         return false
     }

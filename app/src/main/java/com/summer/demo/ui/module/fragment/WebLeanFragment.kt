@@ -2,6 +2,7 @@ package com.summer.demo.ui.module.fragment
 
 import android.view.View
 import android.webkit.WebView
+import android.widget.TextView
 
 import com.summer.demo.R
 import com.summer.demo.module.album.MediaHandleJavascriptInterface
@@ -11,17 +12,15 @@ import com.summer.helper.web.CustomWebView
 import com.summer.helper.web.SWebviewClient
 import com.summer.helper.web.WebContainerActivity
 
-import butterknife.BindView
-import butterknife.OnClick
-
 /**
  * @Description: Webview访问测试
  * @Author: xiastars@vip.qq.com
  * @CreateDate: 2019/10/10 11:29
  */
 class WebLeanFragment : BaseFragment(), View.OnClickListener {
-    @BindView(R.id.webview)
-    internal var customWebView: CustomWebView? = null
+    private val customWebView: CustomWebView by Bind(R.id.webview)
+    private val tvLocal: TextView by Bind(R.id.tv_local,true)
+    private val tvUrl: TextView by Bind(R.id.tv_url,true)
 
     override fun initView(view: View) {
         val data = "<p>31231111111</p>\\n<table style=\\\"border-collapse: collapse; width: 100%;\\\" border=\\\"1\\\">\\n<tbody>\\n<tr>\\n<td style=\\\"width: 14.2857%;\\\">" +
@@ -61,7 +60,7 @@ class WebLeanFragment : BaseFragment(), View.OnClickListener {
         return R.layout.fragment_learn_web
     }
 
-    @OnClick(R.id.tv_local, R.id.tv_url)
+
     override fun onClick(v: View) {
         when (v.id) {
             R.id.tv_url -> {

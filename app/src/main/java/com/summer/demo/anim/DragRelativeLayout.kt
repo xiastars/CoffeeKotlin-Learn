@@ -441,7 +441,6 @@ class DragRelativeLayout(context: Context) : BaseDragView(context), OnClickListe
         /* 切换时，必须等到当前帧播完再回调 */
         Handler().postDelayed({
             removeAllBitmap()
-            Logs.i("xia", onActionFinishListener!!.toString() + ",,,")
             if (null != onActionFinishListener) {
                 onActionFinishListener!!.finish()
             }

@@ -3,12 +3,8 @@ package com.summer.demo.ui.course
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebViewClient
-import android.widget.LinearLayout
-import android.widget.RelativeLayout
-import butterknife.BindView
 import com.summer.demo.R
 import com.summer.demo.module.base.BaseFragment
-import com.summer.helper.view.RoundAngleImageView
 import com.summer.helper.web.CustomWebView
 
 /**
@@ -18,15 +14,7 @@ import com.summer.helper.web.CustomWebView
  */
 class CourseWebFragment : BaseFragment() {
 
-    @BindView(R.id.webview_container)
-    internal var webviewContainer: CustomWebView? = null
-    @BindView(R.id.iv_loading_icon)
-    internal var ivLoadingIcon: RoundAngleImageView? = null
-    @BindView(R.id.loading_container)
-    internal var loadingContainer: LinearLayout? = null
-    @BindView(R.id.rl_container_layout)
-    internal var rlContainerLayout: RelativeLayout? = null
-
+    internal val webviewContainer: CustomWebView by Bind(R.id.webview_container)
     private var loadPageUrl: String? = null
 
 

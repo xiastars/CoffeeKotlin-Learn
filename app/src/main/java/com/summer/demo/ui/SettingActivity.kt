@@ -3,8 +3,6 @@ package com.summer.demo.ui
 import android.text.TextUtils
 import android.view.View
 import android.widget.TextView
-import butterknife.BindView
-import butterknife.OnClick
 import com.bumptech.glide.load.engine.cache.InternalCacheDiskCacheFactory
 import com.summer.demo.R
 import com.summer.demo.dialog.BaseTipsDialog
@@ -25,14 +23,8 @@ import java.math.BigDecimal
  */
 class SettingActivity : BaseActivity() {
 
-    @BindView(R.id.tv_mine_phone)
-    internal var mTvPhone: TextView? = null
-
-    @BindView(R.id.tv_mine_push)
-    internal var mTvPush: TextView? = null
-
-    @BindView(R.id.tv_mine_clear)
-    internal var mTvClear: TextView? = null
+    internal val mTvPush: TextView by Bind(R.id.tv_mine_push)
+    internal val mTvClear: TextView by Bind(R.id.tv_mine_clear)
 
     override fun initData() {
         setBackTag("ac_user_setting")
@@ -57,7 +49,6 @@ class SettingActivity : BaseActivity() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    @OnClick(R.id.mine_set_phone, R.id.mine_set_push, R.id.mine_set_clear, R.id.mine_set_logout, R.id.ll_about)
     fun onCLick(view: View) {
 
         when (view.id) {

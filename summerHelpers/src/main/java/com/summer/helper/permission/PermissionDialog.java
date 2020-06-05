@@ -74,7 +74,7 @@ public class PermissionDialog extends BaseCenterDialog {
     }
 
     private void addPermissionView(final String permission, int titleRes, int detail) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_permission, null);
+        View view = LayoutInflater.from(getContext()).inflate(R.layout.item_permission, null);
         llContainer.addView(view);
         TextView tvTitle = view.findViewById(R.id.tv_permission);
         tvTitle.setText(titleRes);
@@ -90,12 +90,12 @@ public class PermissionDialog extends BaseCenterDialog {
                     gpsIntent.addCategory("android.intent.category.ALTERNATIVE");
                     gpsIntent.setData(Uri.parse("custom:3"));
                     try {
-                        PendingIntent.getBroadcast(context, 0, gpsIntent, 0).send();
+                        PendingIntent.getBroadcast(getContext(), 0, gpsIntent, 0).send();
                     } catch (PendingIntent.CanceledException e) {
                         e.printStackTrace();
                     }
                 }
-                ActivityCompat.requestPermissions((Activity) context, new String[]{permission}, 123);
+                ActivityCompat.requestPermissions((Activity) getContext(), new String[]{permission}, 123);
             }
         });
 
@@ -128,7 +128,7 @@ public class PermissionDialog extends BaseCenterDialog {
         boolean isChecked = true;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             for (String p : permissions) {
-                if (ContextCompat.checkSelfPermission(context,
+                if (ContextCompat.checkSelfPermission(getContext(),
                         p) != PackageManager.PERMISSION_GRANTED) {
                     isChecked = false;
                 }

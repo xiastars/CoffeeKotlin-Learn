@@ -1,7 +1,6 @@
 package com.summer.demo.ui.view.customfragment
 
 import android.view.View
-import butterknife.BindView
 import com.summer.demo.R
 import com.summer.demo.bean.DanmakuInfo
 import com.summer.demo.module.base.BaseFragment
@@ -18,8 +17,7 @@ import java.util.*
  * @CreateDate: 2019/10/11 10:26
  */
 class DanmakuFragment : BaseFragment() {
-    @BindView(R.id.rl_danmaku)
-    internal var rlDanmaku: SimpleDanmakuView? = null
+    internal val rlDanmaku: SimpleDanmakuView by Bind(R.id.rl_danmaku)
 
     override fun initView(view: View) {
         val danmakuInfos = ArrayList<DanmakuInfo>()

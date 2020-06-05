@@ -3,7 +3,6 @@ package com.summer.demo.ui.fragment.viewpager
 import android.support.v4.app.Fragment
 import android.support.v4.view.ViewPager
 import android.view.View
-import butterknife.BindView
 import com.summer.demo.R
 import com.summer.demo.module.base.BaseFragment
 import com.summer.demo.module.base.viewpager.NFPagerTabView
@@ -23,10 +22,8 @@ import java.util.*
  */
 class CommonVPFragment : BaseFragment() {
 
-    @BindView(R.id.pagerStrip)
-    internal var pagerStrip: PagerSlidingTabStrip? = null
-    @BindView(R.id.viewPager)
-    internal var viewPager: CustomerViewPager? = null
+    internal val pagerStrip: PagerSlidingTabStrip by Bind(R.id.pagerStrip)
+    internal val viewPager: CustomerViewPager by Bind(R.id.viewPager)
     internal var fragments: MutableList<Fragment> = ArrayList()
 
     internal var currentPage = -1

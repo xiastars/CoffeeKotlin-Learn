@@ -4,9 +4,6 @@ import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RelativeLayout
-import butterknife.BindView
-import butterknife.ButterKnife
 import com.summer.demo.R
 import com.summer.demo.bean.BookBean
 import com.summer.helper.utils.SUtils
@@ -45,13 +42,7 @@ class FunQuestionGalleryAdapter(context: Context) : GalleryAdapter(context) {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        @BindView(R.id.iv_nav)
-        var ivNav: RoundAngleImageView? = null
-        @BindView(R.id.ll_parent)
-        var llParent: RelativeLayout? = null
+        var ivNav: RoundAngleImageView = itemView.findViewById(R.id.iv_nav)
 
-        init {
-            ButterKnife.bind(this, itemView)
-        }
     }
 }

@@ -17,7 +17,6 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.RelativeLayout
 import android.widget.TextView
-import butterknife.BindView
 import com.summer.demo.R
 import com.summer.demo.constant.BroadConst
 import com.summer.demo.module.album.util.ImageItem
@@ -43,8 +42,7 @@ import java.util.*
  * @编者 夏起亮
  */
 class ViewBigPhotoActivity : BaseActivity(), OnClickListener {
-    @BindView(R.id.count)
-    var tvItemCount: TextView? = null
+    private val tvItemCount: TextView by Bind(R.id.count)
     protected var albumItem: MutableList<ImageItem>? = null
     private var pager: ViewPager? = null
     private var imageView: SupportScrollEventWebView? = null
@@ -170,12 +168,12 @@ class ViewBigPhotoActivity : BaseActivity(), OnClickListener {
             imageView!!.setOnLongClickListener {
                 val selectTypeDialog = BottomListDialog(context!!)
                 val titles = arrayOf("保存", "取消")
-                selectTypeDialog.setDatas(titles)
+                selectTypeDialog.datas = titles
                 selectTypeDialog.setStringType()
                 selectTypeDialog.showTopContent(View.GONE)
-                selectTypeDialog.showBottomContent(View.GONE)
+                selectTypeDialog.showBottomContent  = View.GONE
                 selectTypeDialog.show()
-                selectTypeDialog.setListener { position ->
+                selectTypeDialog.listener =  OnSimpleClickListener{ position ->
                     if (position == 0) {
                         downloadImg(finalPath)
                     }

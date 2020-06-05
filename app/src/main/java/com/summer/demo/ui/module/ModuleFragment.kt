@@ -5,8 +5,6 @@ import com.summer.demo.R
 import com.summer.demo.adapter.CommonGridAdapter
 import com.summer.demo.bean.ModuleInfo
 import com.summer.demo.ui.main.BaseMainFragment
-import com.summer.demo.ui.module.colorpicker.AmbilWarnaDialog
-import com.summer.demo.ui.module.colorpicker.AmbilWarnaDialog.OnAmbilWarnaListener
 import com.summer.helper.listener.OnSimpleClickListener
 import com.summer.helper.utils.JumpTo
 import com.summer.helper.view.NRecycleView
@@ -18,7 +16,7 @@ import java.util.*
  * @CreateDate: 2019/10/9 10:32
  */
 class ModuleFragment : BaseMainFragment() {
-
+    val moduleInfos = ArrayList<ModuleInfo>()
     private val svContainer: NRecycleView by Bind(R.id.sv_container)
     internal lateinit var adapter: CommonGridAdapter
 
@@ -26,8 +24,8 @@ class ModuleFragment : BaseMainFragment() {
         svContainer.setGridView(3)
         svContainer.setDivider()
         adapter = CommonGridAdapter(context!!, OnSimpleClickListener { position -> clickChild(position) })
-        svContainer!!.adapter = adapter
-        val moduleInfos = ArrayList<ModuleInfo>()
+        svContainer.adapter = adapter
+
         moduleInfos.add(ModuleInfo(R.drawable.ic_network, "网络请求", ModulePos.POS_NETWORK))
         moduleInfos.add(ModuleInfo(R.drawable.ic_module_animation, "帧动画", ModulePos.POS_FRAME))
         moduleInfos.add(ModuleInfo(R.drawable.ic_module_transition, "属性动画", ModulePos.POS_ANIM))
@@ -47,10 +45,9 @@ class ModuleFragment : BaseMainFragment() {
     private fun clickChild(position: Int) {
         when (position) {
             ModulePos.POS_COLOR_PICKER -> {
-                val ambilWarnaDialog = AmbilWarnaDialog(context, getResColor(R.color.red_d3), OnAmbilWarnaListener { })
-                ambilWarnaDialog.show()
+
             }
-            else -> JumpTo.getInstance().commonJump(getContext(), ModuleContainerActivity::class.java, position)
+            else -> JumpTo.getInstance().commonJump(getContext(), ModuleContainerActivity::class.java, moduleInfos[position].pos)
         }
 
     }

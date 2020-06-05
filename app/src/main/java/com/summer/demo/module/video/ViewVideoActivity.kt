@@ -3,8 +3,6 @@ package com.summer.demo.module.video
 import android.media.MediaPlayer
 import android.view.View
 import android.widget.RelativeLayout
-import butterknife.BindView
-import butterknife.ButterKnife
 import com.summer.demo.R
 import com.summer.demo.module.base.BaseActivity
 import com.summer.demo.module.video.util.MyVideoView
@@ -24,10 +22,7 @@ class ViewVideoActivity : BaseActivity() {
     internal lateinit var loadingDialog: LoadingDialog
     internal var path: String? = null
 
-    @BindView(R.id.vd_play)
-    internal var mVideoView: MyVideoView? = null
-    @BindView(R.id.rl_parent)
-    internal var rlParent: RelativeLayout? = null
+    internal val mVideoView: MyVideoView by Bind(R.id.vd_play)
 
 
     override fun onStart() {
@@ -55,7 +50,6 @@ class ViewVideoActivity : BaseActivity() {
         if (path != null && path!!.startsWith("//")) {
             path = PostData.OOSHEAD + ":" + path
         }
-        ButterKnife.bind(this)
         loadingDialog = LoadingDialog(context)
         loadingDialog.startLoading()
         setLayoutFullscreen(true)

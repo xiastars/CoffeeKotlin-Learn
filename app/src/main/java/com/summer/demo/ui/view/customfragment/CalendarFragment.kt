@@ -3,7 +3,6 @@ package com.summer.demo.ui.view.customfragment
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RelativeLayout
-import butterknife.BindView
 import com.summer.demo.R
 import com.summer.demo.module.base.BaseFragment
 import com.summer.demo.ui.view.customfragment.calendar.CalendarView
@@ -15,8 +14,7 @@ import com.summer.helper.utils.STimeUtils
  * @CreateDate: 2019/11/11 16:45
  */
 class CalendarFragment : BaseFragment() {
-    @BindView(R.id.rl_container)
-    internal var rlContainer: RelativeLayout? = null
+    internal val rlContainer: RelativeLayout by Bind(R.id.rl_container)
 
     override fun initView(view: View) {
         val calendarView = CalendarView(context!!)

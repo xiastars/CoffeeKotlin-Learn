@@ -6,8 +6,6 @@ import android.text.InputType
 import android.view.View
 import android.widget.RelativeLayout
 import android.widget.TextView
-import butterknife.BindView
-import butterknife.OnClick
 import com.summer.demo.R
 import com.summer.demo.dialog.DialogModifyContent
 import com.summer.demo.listener.OnModifyContentListener
@@ -21,27 +19,20 @@ import com.summer.helper.utils.SUtils
  * @CreateDate: 2019/11/6 17:44
  */
 class TrapezoidFragment : BaseFragment(), View.OnClickListener {
-    @BindView(R.id.line_bottom)
-    internal var lineBottom: View? = null
-    @BindView(R.id.line_left)
-    internal var lineLeft: View? = null
-    @BindView(R.id.line_right)
-    internal var lineRight: View? = null
-    @BindView(R.id.line_top)
-    internal var lineTop: View? = null
+
+    internal val lineBottom: View by Bind(R.id.line_bottom)
+    internal val lineLeft: View by Bind(R.id.line_left)
+    internal val lineRight: View by Bind(R.id.line_right)
+    internal val lineTop: View by Bind(R.id.line_top)
 
     internal lateinit var bottom: RectF
     internal lateinit var left: RectF
     internal lateinit var right: RectF
     internal lateinit var top: RectF
-    @BindView(R.id.tv_bottom)
-    internal var tvBottom: TextView? = null
-    @BindView(R.id.tv_left)
-    internal var tvLeft: TextView? = null
-    @BindView(R.id.tv_right)
-    internal var tvRight: TextView? = null
-    @BindView(R.id.tv_top)
-    internal var tvTop: TextView? = null
+    internal val tvBottom: TextView by Bind(R.id.tv_bottom,true)
+    internal val tvLeft: TextView by Bind(R.id.tv_left)
+    internal val tvRight: TextView  by Bind(R.id.tv_right)
+    internal val tvTop: TextView by Bind(R.id.tv_top)
 
     internal var scale = 0f
 
@@ -79,9 +70,9 @@ class TrapezoidFragment : BaseFragment(), View.OnClickListener {
         Logs.i("rect:$top")
         setLayout(top, lineTop!!)
 
-        tvBottom!!.text = (bottom.right - bottom.left).toString() + ""
-        tvLeft!!.text = (left.bottom - left.top).toString() + ""
-        tvRight!!.text = (right.bottom - right.top).toString() + ""
+        tvBottom.text = (bottom.right - bottom.left).toString() + ""
+        tvLeft.text = (left.bottom - left.top).toString() + ""
+        tvRight.text = (right.bottom - right.top).toString() + ""
         tvTop!!.text = (top.right - top.left).toString() + ""
         (tvBottom!!.layoutParams as RelativeLayout.LayoutParams).leftMargin = (bottom.left + (bottom.right - bottom.left) / 2).toInt()
         (tvLeft!!.layoutParams as RelativeLayout.LayoutParams).topMargin = (left.bottom - (left.bottom - left.top) / 2).toInt()
@@ -112,7 +103,6 @@ class TrapezoidFragment : BaseFragment(), View.OnClickListener {
         return R.layout.view_cal
     }
 
-    @OnClick(R.id.tv_bottom)
     override fun onClick(v: View) {
         when (v.id) {
             R.id.tv_bottom -> {
@@ -121,8 +111,8 @@ class TrapezoidFragment : BaseFragment(), View.OnClickListener {
                     scale = value / bottom.width()
                     resetLayout()
                 })
-                dialogModifyContent.setInputType(InputType.TYPE_CLASS_NUMBER)
-                dialogModifyContent.setMaxTextLength(100)
+                dialogModifyContent.inputType = InputType.TYPE_CLASS_NUMBER
+                dialogModifyContent.maxTextLength = 100
                 dialogModifyContent.show()
             }
         }

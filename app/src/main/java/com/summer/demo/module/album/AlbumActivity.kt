@@ -15,9 +15,6 @@ import android.view.View.OnClickListener
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.*
-import butterknife.BindView
-import butterknife.ButterKnife
-import butterknife.OnClick
 import com.summer.demo.R
 import com.summer.demo.module.album.adapter.AlbumGridViewAdapter
 import com.summer.demo.module.album.adapter.FolersAdapter
@@ -39,20 +36,13 @@ import java.util.*
  * @author xiastars
  */
 class AlbumActivity : BaseActivity(), OnClickListener {
-    @BindView(R.id.myGrid)
-    internal var myGrid: NRecycleView? = null
-    @BindView(R.id.nv_list)
-    internal var nvList: NRecycleView? = null
-    @BindView(R.id.rl_list_cover)
-    internal var rlListCover: RelativeLayout? = null
-    @BindView(R.id.preview)
-    internal lateinit var preview: Button
-    @BindView(R.id.ok_button)
-    internal  lateinit var okButton: Button
-    @BindView(R.id.bottom_layout)
-    internal var bottomLayout: RelativeLayout? = null
-    @BindView(R.id.tv_finish)
-    internal lateinit var tvFinish: TextView
+    private val myGrid: NRecycleView by Bind(R.id.myGrid)
+    private val nvList: NRecycleView by Bind(R.id.nv_list)
+    private val rlListCover: RelativeLayout by Bind(R.id.rl_list_cover)
+    private val  preview: Button by Bind(R.id.preview)
+    private val okButton: Button by Bind(R.id.ok_button,true)
+    private val bottomLayout: RelativeLayout by Bind(R.id.bottom_layout)
+    private val tvFinish: TextView by Bind(R.id.tv_finish)
     //显示手机里的所有图片的列表控件
     private var gridView: NRecycleView? = null
     //gridView的adapter
@@ -99,7 +89,6 @@ class AlbumActivity : BaseActivity(), OnClickListener {
         }
     }
 
-    @OnClick(R.id.ok_button)
     override fun onClick(v: View) {
         when (v.id) {
             R.id.ok_button -> onSelectItem()
@@ -125,7 +114,6 @@ class AlbumActivity : BaseActivity(), OnClickListener {
         btnAlbum.setOnClickListener(BackListener())
         btnAlbum.visibility = View.VISIBLE
         btnAlbum.text = "预览"
-        preview = findViewById(R.id.preview) as Button
         preview.setOnClickListener {
             Logs.i(nvList!!.visibility.toString() + ",,,,")
             if (rlListCover!!.visibility == View.VISIBLE) {
@@ -140,8 +128,6 @@ class AlbumActivity : BaseActivity(), OnClickListener {
         intent = getIntent()
         gridView = findViewById(R.id.myGrid) as NRecycleView
         gridView!!.setGridView(3)
-        tvFinish = findViewById(R.id.tv_finish) as TextView
-        okButton = findViewById(R.id.ok_button) as Button
         okButton.text = getString(R.string.finish) + "(" + tempSelectBitmap!!.size + "/" + PublicWay.MAX_SELECT_COUNT + ")"
         if (showVideo) {
             preview.visibility = View.GONE
@@ -421,13 +407,12 @@ class AlbumActivity : BaseActivity(), OnClickListener {
     }
 
     override fun initData() {
-        ButterKnife.bind(this)
         SUtils.initScreenDisplayMetrics(this)
         //注册一个广播，这个广播主要是用于在GalleryActivity进行预览时，防止当所有图片都删除完后，再回到该页面时被取消选中的图片仍处于选中状态
         val filter = IntentFilter("data.broadcast.action")
         registerReceiver(broadcastReceiver, filter)
         bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.plugin_camera_no_pictures)
-        val datas = JumpTo.getObject(this) as ArrayList<ImageItem>
+        val datas = JumpTo.getObject(this) as? ArrayList<ImageItem>
         if (datas != null) {
             tempSelectBitmap = datas
         }

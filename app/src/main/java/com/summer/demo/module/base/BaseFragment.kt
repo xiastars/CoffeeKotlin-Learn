@@ -12,8 +12,6 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import butterknife.ButterKnife
-import butterknife.Unbinder
 import com.summer.demo.R
 import com.summer.demo.bean.BaseResp
 import com.summer.demo.constant.ApiConstants
@@ -44,8 +42,6 @@ abstract class BaseFragment : Fragment(),View.OnClickListener {
     protected lateinit var mView: View
     protected var DEFAULT_LIMIT = 10
 
-    internal lateinit var unbinder: Unbinder
-
     val handleTime: Long
         get() = baseHelper!!.handleTime
 
@@ -58,7 +54,6 @@ abstract class BaseFragment : Fragment(),View.OnClickListener {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         mView = LayoutInflater.from(context).inflate(if (setContentView() == 0) R.layout.view_empty else setContentView(), null)
-        unbinder = ButterKnife.bind(this, mView)
         initView(mView)
         return mView
     }
@@ -190,7 +185,6 @@ abstract class BaseFragment : Fragment(),View.OnClickListener {
         if (baseHelper != null) {
             baseHelper!!.cancelLoading()
         }
-        unbinder.unbind()
     }
 
     protected fun finishLoad(svContainer: MaterialRefreshLayout?) {
