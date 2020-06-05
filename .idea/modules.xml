@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CoffeeKotlin-Learn.iml" filepath="$PROJECT_DIR$/CoffeeKotlin-Learn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FFmpegAndroid/FFmpegAndroid.iml" filepath="$PROJECT_DIR$/FFmpegAndroid/FFmpegAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/summerHelpers/summerHelpers.iml" filepath="$PROJECT_DIR$/summerHelpers/summerHelpers.iml" />
+    </modules>
+  </component>
+</project>

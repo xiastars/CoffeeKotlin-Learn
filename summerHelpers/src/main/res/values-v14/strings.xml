@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="material_colors">
+        <item>@color/blue_56</item>
+    </integer-array>
+    <string name="app_name">nfhelper</string>
+    <string name="label_yesterday">昨天</string>
+    <string name="label_just">刚刚</string>
+    <string name="label_before_minutes">%1$d分钟前</string>
+    <string name="label_before_hours">%1$d小时前</string>
+
+    <string name="copy_file">wordspace.zip</string>
+    <string name="to_file">wordspace</string>
+
+    <string name="tip_permission_always_failed">我们需要以下权限，请在设置中为我们开启：\n\n%1$s</string>
+    <string name="btn_resume">继续</string>
+    <string name="title_tip">提示</string>
+    <string name="tips">提示</string>
+    <string name="sure">确认</string>
+    <string name="btn_setting">设置</string>
+    <string name="finish">完成</string>
+    <string name="btn_no">不</string>
+    <string name="tip_permission_rationale">Balanx需要以下权限才能正常进行：</string>
+
+    <string name="tip_empty_content">这里空空如也</string>
+    <string name="cancel_dialog">取消</string>
+
+    <string name="submit">确定</string>
+
+    <string name="permission_name_calendar">日历</string>
+    <string name="permission_name_camera">相机</string>
+    <string name="permission_name_contacts">通讯录</string>
+    <string name="permission_name_accounts">手机账号</string>
+    <string name="permission_name_location">位置信息</string>
+    <string name="permission_location_detail">开启蓝牙需要位置信息。</string>
+    <string name="permission_name_microphone">麦克风</string>
+    <string name="permission_name_phone">电话</string>
+    <string name="permission_name_sensors">身体传感器</string>
+    <string name="permission_name_sms">短信</string>
+    <string name="permission_name_write_storage">写入存储</string>
+    <string name="permission_name_read_storage">读取存储</string>
+    <string name="permission_storage_detail">本地数据存储需要。</string>
+    <string name="open_ble_hint">根据安卓9.0及以上的规定，你必须开启GPS服务才能搜索蓝牙服务。</string>
+    <string name="go_to_setting">去设置</string>
+</resources>

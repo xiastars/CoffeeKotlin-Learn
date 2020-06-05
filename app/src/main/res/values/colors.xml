@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pink">#44892314</color>
+    <color name="green">#44236745</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="blue_la">#32A1FA</color>
+    <color name="darker_gray">#828282</color>
+    <color name="black_la">#ddd</color>
+    <color name="black_db">#606060</color>
+    <color name="black_da">#828282</color>
+    <color name="bule_overlay">#660D92DD</color>
+    <color name="action_bar_co">#4cb9fe</color>
+    
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/size_15"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/item_left_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:layout_width="@dimen/size_230"
+            android:layout_height="@dimen/size_314"
+            android:layout_marginTop="@dimen/size_40"
+            android:background="@color/grey_9c"
+            android:scaleType="fitXY" />
+        <com.summer.helper.view.RoundAngleImageView
+            android:id="@+id/iv_book_icon"
+            android:layout_width="@dimen/size_223"
+            android:layout_height="@dimen/size_314"
+            android:layout_marginTop="@dimen/size_20"
+            android:scaleType="fitXY"
+            app:border_color="@color/purple_2f"
+            app:border_width="@dimen/size_3" />
+        <TextView
+            android:id="@+id/tv_book_name"
+            android:layout_width="@dimen/size_200"
+            android:layout_marginTop="@dimen/size_35"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size_5"
+            android:ellipsize="end"
+            android:maxLength="10"
+            android:text="大闹天宫"
+            android:textColor="@color/purple_2f"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:textSize="@dimen/text_20"
+            android:layout_height="@dimen/size_55"/>
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:visibility="gone"
+        android:layout_toRightOf="@id/item_left_rl"
+        android:layout_marginLeft="@dimen/size_025"
+        android:background="@drawable/delete"
+        android:layout_width="@dimen/size_50"
+        android:layout_height="@dimen/size_50" />
+    
+
+</RelativeLayout>

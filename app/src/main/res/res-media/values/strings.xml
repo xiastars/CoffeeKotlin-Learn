@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 图片浏览 -->
+	<string name="only_choose_num">超出可选图片张数</string>
+	<string name="title_photo">图片</string>
+	<string name="edit">编辑</string>
+	<string name="edit_video">编辑视频</string>
+	<string name="edit_video_hint">只能上传15秒内的影片，需要进行编辑</string>
+</resources>

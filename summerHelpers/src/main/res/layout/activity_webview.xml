@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_container_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <com.summer.helper.web.CustomWebView
+        android:id="@+id/webview_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/loading_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone"
+        android:focusable="true"
+        android:gravity="center" >
+
+        <com.summer.helper.view.RoundAngleImageView
+            android:id="@+id/iv_loading_icon"
+            android:layout_width="70dip"
+            android:layout_height="70dip"
+            android:layout_marginTop="10dip"
+            android:scaleType="centerCrop"
+            app:border_color="@color/white"
+            app:border_width="0dip"
+            app:corner_radius="10dip"
+            app:default_background="@color/transparent"
+            app:oval="false" />
+    </LinearLayout>
+
+</RelativeLayout>

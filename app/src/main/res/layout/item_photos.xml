@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:id="@+id/parent"
+    android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/item_album"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:scaleType="center"
+            android:visibility="visible" />
+         <ImageView
+            android:id="@+id/item_add"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:visibility="gone"
+            android:src="@drawable/click_pic_add_" />
+        <RelativeLayout 
+            android:id="@+id/item_selected"
+            android:layout_width="60dp"
+            android:visibility="gone"
+            android:layout_height="60dp">
+            <View
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:checked="false"
+		        android:background="@drawable/so_white_st_lightergray16"
+		        android:focusable="false"
+		        android:clickable="false" />
+            <View
+                android:layout_width="30dp"
+                android:layout_height="30dp" 
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_addfriend" />
+            
+        </RelativeLayout>
+        
+
+</FrameLayout>

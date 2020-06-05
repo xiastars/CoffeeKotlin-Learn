@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:background="@drawable/common_click"
+	android:layout_height="140dp">
+
+	<ImageView
+		android:id="@+id/iv_img"
+		android:layout_marginLeft="10dp"
+		android:layout_centerVertical="true"
+		android:layout_width="100dp"
+		android:layout_height="100dp" />
+
+	<TextView
+		android:id="@+id/tv_content"
+		android:layout_toRightOf="@id/iv_img"
+		android:layout_centerVertical="true"
+		android:layout_marginRight="10dp"
+		android:layout_marginLeft="10dp"
+		style="@style/grey4a_16" />
+
+</RelativeLayout>

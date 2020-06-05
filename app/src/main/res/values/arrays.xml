@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="titles">
+        <item>JAVA基础</item>
+        <item>View的用法</item>
+        <item>疑难问题总结</item>
+        <item>相关链接收藏</item>
+        <item>@string/toast_demo</item>
+        <item>@string/picture_demo</item>
+        <item>@string/mediaPlayer</item>
+        <item>ListView与GridView的综合用法</item>
+        <item>WebView的用法(未完成)</item>
+        <item>ViewPager的多种用法</item>
+        <item>Dialog的实践示例</item>
+        <item>自定义Drawable的综合用法</item>
+        <item>资源下载示例</item>
+        <item>小程序入门</item>
+        <item>添加一个随意拖动的View</item>
+        <item>RXjava的应用</item>\
+        <item>帧动画的使用</item>
+        <item>了解属性动画</item>
+        <item>SDK对接</item>
+    </string-array>
+    <string-array name="wxapp_titles">
+        <item>第一节 从零开始</item>
+        <item>第二节 了解逻辑层</item>
+        <item>第三节 创建JS文件</item>
+        <item>第四节 常用view</item>
+        <item>第五节 css基础</item>
+    </string-array>
+
+    <string-array name="list_titles">
+        <item>普通的ListView的用法</item>
+        <item>普通的GridView的用法</item>
+        <item>可刷新RecyleView/ListView的用法</item>
+        <item>可刷新RecyleView/GridView的用法</item>
+        <item>横向RecycleView的用法</item>
+    </string-array>
+
+    <string-array name="java_titles">
+        <item>关于对象</item>
+        <item>子类与父类</item>
+    </string-array>
+
+    <string-array name="calculation">
+        <item>梯形计算</item>
+    </string-array>
+
+    <string-array name="tools">
+        <item>文件夹里的视频生成所有封面</item>
+    </string-array>
+
+    <string-array name="net">
+        <item>五层体系结构</item>
+        <item>TCP三次握手和四次挥手过程</item>
+        <item>Http和Https</item>
+    </string-array>
+
+    <string-array name="sdks">
+        <item>Alexa</item>
+    </string-array>
+
+    <string-array name="title_viewpager">
+        <item>一般Viewpager</item>
+        <item>Viewpager自定义标题栏</item>
+    </string-array>
+
+    <string-array name="titl_view">
+        <item>TextView</item>
+        <item>EditView</item>
+    </string-array>
+
+    <string-array name="self_titles">
+        <item>图片渲染模式</item>
+    </string-array>
+
+    <string-array name="dialog_titles">
+        <item>作为下拉列表展现</item>
+        <item>普通的GridView的用法</item>
+        <item>可刷新RecyleView/ListView的用法</item>
+        <item>可刷新RecyleView/GridView的用法</item>
+        <item>横向RecycleView的用法</item>
+    </string-array>
+
+    <string-array name="collect_titles">
+        <item>作为下拉列表展现</item>
+        <item>普通的GridView的用法</item>
+        <item>可刷新RecyleView/ListView的用法</item>
+        <item>可刷新RecyleView/GridView的用法</item>
+        <item>横向RecycleView的用法</item>
+    </string-array>
+    <string-array name="cases_titles">
+        <item>ScrollView包含GridView，GridView自动跳到最顶端</item>
+        <item>普通的GridView的用法</item>
+        <item>可刷新RecyleView/ListView的用法</item>
+        <item>可刷新RecyleView/GridView的用法</item>
+        <item>横向RecycleView的用法</item>
+    </string-array>
+    <string-array name="choice_item">
+        <item>@string/take_photo</item>
+        <item>@string/choose_photo</item>
+    </string-array>
+    <string-array name="blend_modes">
+        <item>Add</item>
+        <item>Clear</item>
+        <item>Darken</item>
+        <item>Destination (DST)</item>
+        <item>Destination atop (DST_ATOP)</item>
+        <item>Destination in (DST_IN)</item>
+        <item>Destination out (DST_OUT)</item>
+        <item>Destination over (DST_OVER)</item>
+        <item>Lighten</item>
+        <item>Multiply</item>
+        <item>Overlay</item>
+        <item>Screen</item>
+        <item>Source (SRC)</item>
+        <item>Source atop (SRC_ATOP)</item>
+        <item>Source in (SRC_IN)</item>
+        <item>Source out (SRC_OUT)</item>
+        <item>Source over (SRC_OVER)</item>
+        <item>XOR</item>
+    </string-array>
+</resources>

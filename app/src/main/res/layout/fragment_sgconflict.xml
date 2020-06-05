@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_0a"
+    android:orientation="vertical">
+
+    <com.summer.demo.view.CustomScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_180" />
+
+            <com.summer.helper.view.NRecycleView
+                android:id="@+id/bookshelf_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/size_85"
+                android:layout_marginRight="@dimen/size_85"
+                android:background="@drawable/so_white_st_red5"
+                android:minHeight="@dimen/size_400" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_284">
+
+                <TextView
+                    android:id="@+id/tv_book_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/size_50"
+                    android:text="共0本"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_24" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </com.summer.demo.view.CustomScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_100"
+        android:background="@color/green_4b"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/bookshelf_download"
+            android:layout_width="@dimen/size_220"
+            android:layout_height="@dimen/size_60"
+            android:layout_marginLeft="@dimen/size_60"
+            android:background="@drawable/so_grayca90"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/size_50"
+                android:layout_height="@dimen/size_50"
+                android:layout_marginRight="@dimen/size_10"
+                android:background="@drawable/delete" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/purple_2f"
+                android:textSize="@dimen/text_24" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/ll_delete"
+            android:layout_width="@dimen/size_160"
+            android:layout_height="@dimen/size_60"
+            android:background="@drawable/so_grayca90"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/size_90"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/size_50"
+                android:layout_height="@dimen/size_50"
+                android:layout_marginRight="@dimen/size_10"
+                android:background="@drawable/delete" />
+
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="删除"
+                android:textColor="@color/purple_2f"
+                android:textSize="@dimen/text_24" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

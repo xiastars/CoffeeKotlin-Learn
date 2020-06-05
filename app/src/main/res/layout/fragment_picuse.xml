@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_2b"
+    android:gravity="center"
+    android:orientation="vertical" >
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btn_common"
+            style="@style/common_button"
+            android:text="内存卡图片使用方法" />
+        
+        <Button
+            android:id="@+id/btn_longer"
+            style="@style/common_button"
+            android:text="网络图片使用方法" />
+
+        <Button
+            android:id="@+id/btn_special"
+            style="@style/common_button"
+            android:text="asset图片使用方法" />
+    </LinearLayout>
+
+</RelativeLayout>

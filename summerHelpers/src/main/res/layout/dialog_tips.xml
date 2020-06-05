@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="@dimen/size_680"
+        android:layout_height="@dimen/size_196"
+        android:background="@drawable/so_white5"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_10"
+            android:text="@string/tips"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_28"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tips_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/size_10"
+            android:layout_marginRight="@dimen/size_10"
+            android:ellipsize="end"
+            android:textColor="@color/grey_73"
+            android:textSize="@dimen/text_24"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tips_ok_tv"
+            android:layout_width="@dimen/size_140"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/sure"
+            android:layout_marginBottom="@dimen/size_20"
+            android:layout_marginLeft="@dimen/size_20"
+            android:textColor="@color/white"
+            android:padding="@dimen/size_5"
+            android:textSize="@dimen/text_24"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tips_cancel_tv"
+            android:layout_width="@dimen/size_140"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/cancel"
+            android:padding="@dimen/size_5"
+            android:layout_marginBottom="@dimen/size_20"
+            android:layout_marginRight="@dimen/size_20"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_24"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:gravity="center" />
+    </RelativeLayout>
+
+</LinearLayout>

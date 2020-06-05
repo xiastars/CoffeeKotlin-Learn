@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fl_ui"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp" />
+
+    <FrameLayout
+        android:id="@+id/fl_module"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/fl_course"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp" />
+
+    <FrameLayout
+        android:id="@+id/home_content2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/line1"
+        style="@style/line_horizontal"
+        android:layout_height="1dp"
+        android:layout_above="@id/ll_bottom"
+        android:background="#DCD7EB" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.summer.demo.module.view.NavigationButton
+            android:id="@+id/nav_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/lay_12"
+            android:paddingRight="@dimen/lay_12" />
+
+        <com.summer.demo.module.view.NavigationButton
+            android:id="@+id/nav_item_explore"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/lay_12"
+            android:paddingRight="@dimen/lay_12" />
+
+        <com.summer.demo.module.view.NavigationButton
+            android:id="@+id/nav_item_release"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:paddingLeft="@dimen/lay_12"
+            android:paddingRight="@dimen/lay_12" />
+
+        <com.summer.demo.module.view.NavigationButton
+            android:id="@+id/nav_item_dynamic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/lay_12"
+            android:paddingRight="@dimen/lay_12" />
+
+        <com.summer.demo.module.view.NavigationButton
+            android:id="@+id/nav_item_me"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/lay_12"
+            android:paddingRight="@dimen/lay_12" />
+    </LinearLayout>
+</RelativeLayout>

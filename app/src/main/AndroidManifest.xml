@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.summer.demo">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!--蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:name=".AppContext"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo"
+        android:label="@string/app_name"
+
+        android:roundIcon="@drawable/ic_logo"
+
+        android:supportsRtl="true"
+
+        android:theme="@style/Theme">
+        <activity android:name=".ui.main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.AcViewPager"></activity>
+        <activity android:name=".ui.course.LearnJavaActivity" />
+        <activity android:name=".ui.SDKActivity" />
+        <!--screenOrientation 设置为横屏 -->
+        <activity android:name=".ui.AcViews" />
+        <activity android:name="com.summer.helper.web.WebViewActivity"></activity>
+        <activity android:name="com.summer.helper.web.WebContainerActivity"></activity>
+        <activity android:name=".ui.ViewBigPhotoActivity" />
+        <activity android:name=".ui.FragmentContainerActivity" />
+        <activity android:name=".ui.module.ModuleContainerActivity" />
+        <activity android:name=".ui.view.ViewCustomContainerActivity" />
+        <activity android:name=".ui.course.CourseContainerActivity" />
+        <activity android:name=".ui.course.LearnNetActivity" />
+        <activity android:name=".ui.SettingActivity" />
+        <activity android:name=".ui.course.calculation.CalculationActivity" />
+        <!-- 图片视频 -->
+        <activity android:name=".module.album.AlbumActivity" />
+        <activity android:name=".module.album.ShowAllPhotoActivity" />
+        <activity android:name=".module.album.ViewBigPhotoActivity" />
+        <activity android:name=".module.album.GalleryActivity" />
+        <activity android:name=".module.album.ImageFileActivity" />
+        <activity android:name=".module.video.VideoEditActivity" />
+        <activity android:name=".module.video.ViewVideoActivity" />
+    </application>
+
+</manifest>

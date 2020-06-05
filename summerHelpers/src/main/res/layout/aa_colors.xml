@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.summer.helper.web.WebViewActivity" >
+
+    <!-- 第一行 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal" >
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/yellow_f8" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/yellow_ff" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/yellow_f5" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/yellow_94" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/yellow_78" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/yellow_fd" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/yellow_d1" />
+    </LinearLayout>
+    <!-- 第二行 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal" >
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/red_fe" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/red_ff" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/red_e5" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/red_d3" />
+    </LinearLayout>
+    <!-- 第三行 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal" >
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/blue_cc" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/blue_b7" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/blue_85" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/blue_7a" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/blue_4c" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/blue_a6" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/blue_2e" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/blue_18" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/blue_44" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/blue_13" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/blue_01" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/blue_04" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/blue_07" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/blue_0a" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/blue_2b" />
+    </LinearLayout>
+    <!-- 第四行 -->
+
+
+    <!-- 第五行 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal" >
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/green_53" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/green_66" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/green_6f" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/green_6c" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/green_31" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/green_29" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/green_4b" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/green_2b" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/green_78" />
+    </LinearLayout>
+    <!-- 第六行 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal" >
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/grey_f4" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/grey_f1" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/grey_ee" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/grey_e7" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/grey_e5" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/grey_dc" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/grey_ca" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/grey_ba" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/grey_b1" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/grey_9c" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/grey_97" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/grey_82" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/grey_73" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/grey_60" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/grey_57" />
+        
+        <View
+            style="@style/colorutil"
+            android:background="@color/grey_31" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal" >
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/purple_af" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/purple_56" />
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/purple_3d" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal" >
+
+        <View
+            style="@style/colorutil"
+            android:background="@color/grey_31" />
+    </LinearLayout>
+
+</LinearLayout>

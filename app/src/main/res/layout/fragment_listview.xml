@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.summer.helper.view.SRecycleView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list"
+    android:background="@color/grey_f1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</com.summer.helper.view.SRecycleView>

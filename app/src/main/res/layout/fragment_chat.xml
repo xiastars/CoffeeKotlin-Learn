@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<com.summer.helper.view.NRecycleView
+		android:id="@+id/sv_container"
+		android:layout_width="match_parent"
+		android:layout_marginBottom="55dp"
+		android:paddingBottom="10dp"
+		android:layout_height="match_parent"></com.summer.helper.view.NRecycleView>
+
+	<RelativeLayout
+		android:id="@+id/rl_comment_parent"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true">
+
+		<RelativeLayout
+			android:id="@+id/ll_parent"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:minHeight="49dp"
+			android:background="@color/white"
+			android:orientation="horizontal"
+			android:paddingTop="8dp"
+			android:paddingBottom="8dp">
+
+			<RelativeLayout
+				android:id="@+id/rl_edit_parent"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_toLeftOf="@id/btn_send"
+				android:background="@drawable/so_white_greyeb_5"
+				android:layout_marginLeft="15dp"
+				android:focusable="true"
+				android:focusableInTouchMode="true"
+				android:layout_marginRight="8dp">
+
+				<EditText
+					android:id="@+id/edt_comment"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_marginBottom="5dp"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="5dp"
+					android:maxHeight="80dp"
+					android:background="@null"
+					android:gravity="center_vertical"
+					android:maxLength="800"
+					android:minHeight="35dp"
+					android:paddingLeft="10dp"
+					android:textSize="15sp" />
+			</RelativeLayout>
+
+			<com.summer.demo.view.CommonSureView5
+				android:id="@+id/btn_send"
+				android:layout_width="47dp"
+				android:layout_alignBottom="@id/rl_edit_parent"
+				android:layout_height="35dp"
+				android:layout_alignParentRight="true"
+				android:layout_marginRight="10dp"
+				android:textSize="13sp"
+				android:layout_marginBottom="2dp"
+				android:gravity="center"
+				android:text="发送"
+				android:textColor="@color/white" />
+
+		</RelativeLayout>
+
+		<View
+			android:id="@+id/line"
+			style="@style/line_horizontal" />
+	</RelativeLayout>
+
+
+</RelativeLayout>

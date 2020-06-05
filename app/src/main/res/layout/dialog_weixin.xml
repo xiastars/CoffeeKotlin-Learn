@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#303537"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dip"
+        android:paddingLeft="12dip"
+        android:paddingTop="15dip"
+        android:text="xiastars"
+        android:textColor="#45C01A"
+        android:textSize="18sp" />
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1.3dp"
+        android:background="#45C01A" />
+    <TextView
+        android:id="@+id/conceal_topped"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dip"
+        android:layout_marginTop="10dip"
+        android:text="取消置顶"
+        android:paddingBottom="10dip"
+        android:textColor="#ffffff" />
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dp"
+        android:background="#282C2E" />
+    <TextView
+        android:id="@+id/delete_chat"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dip"
+        android:layout_marginTop="10dip"
+        android:text="删除该聊天"
+        android:paddingBottom="10dip"
+        android:textColor="#ffffff" />
+</LinearLayout>

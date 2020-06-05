@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+      <com.summer.demo.view.SupportScrollEventWebView
+          android:id="@+id/btn_drag_view"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:layout_centerInParent="true"
+          android:background="@android:color/transparent"
+          tools:context=".ui.main.MainActivity" />
+
+      <include
+          android:id="@+id/loading"
+          android:layout_centerInParent="true"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          layout="@layout/dialog_loading" />
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_marginBottom="20dp"
+          android:visibility="gone"
+          android:layout_alignParentBottom="true"
+          android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_like"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/so_grey22_45"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                  <ImageView
+                      android:id="@+id/iv_like"
+                      android:layout_width="20dp"
+                      android:layout_height="20dp" />
+
+                  <TextView
+                      android:id="@+id/tv_like"
+                      android:layout_marginLeft="3dp"
+                      android:text="赞"
+                      style="@style/white_14"
+                      android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_like_count"
+                style="@style/white_14"
+                android:layout_below="@id/ll_like"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:text="赞" />
+      </RelativeLayout>
+
+</RelativeLayout>

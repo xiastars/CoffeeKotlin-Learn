@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".AcMain" >
+    
+    <LinearLayout 
+       android:id="@+id/title"
+	   android:layout_width="fill_parent"
+	   android:layout_height="46dp"
+	   android:background="@color/action_bar_co"
+	   android:orientation="vertical" >
+	   <TextView
+	       android:layout_width="match_parent"
+	       android:layout_height="match_parent"
+	       android:gravity="center"
+	       android:textColor="@color/white"
+	       android:textSize="22sp"
+	       android:text="多图选择演示" />
+    </LinearLayout>
+
+     <GridView
+        android:id="@+id/grid_view"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="fill"
+        android:cacheColorHint="#00000000"
+        android:columnWidth="100dp"
+        android:horizontalSpacing="2dp"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="2dp"/>
+
+</RelativeLayout>

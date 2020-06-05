@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:paddingTop="10dp"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/view_left"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/so_yellow_oval"
+        android:layout_width="8dp"
+        android:layout_height="8dp" />
+
+    <TextView
+        android:id="@+id/tv_permission"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginRight="50dp"
+        android:layout_toRightOf="@id/view_left"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_detail"
+        android:layout_alignLeft="@id/tv_permission"
+        android:textSize="14sp"
+        android:layout_marginRight="50dp"
+        android:layout_below="@id/tv_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Switch
+        android:id="@+id/view_switch"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

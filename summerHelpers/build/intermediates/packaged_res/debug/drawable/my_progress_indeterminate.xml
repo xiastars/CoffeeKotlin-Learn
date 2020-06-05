@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false" 
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="100"  >
+        <clip
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/progress_one"
+            android:gravity="left"  />
+    </item>
+      <item android:duration="100"  >
+        <clip
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/progress_two"
+            android:gravity="left"  />
+    </item>
+      <item android:duration="100"  >
+        <clip
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/progress_three"
+            android:gravity="left"  />
+    </item>
+      <item android:duration="100"  >
+        <clip
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/progress_four"
+            android:gravity="left"  />
+    </item>
+
+</animation-list>

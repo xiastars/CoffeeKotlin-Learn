@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view_left"
+        android:layout_width="100dp"
+        android:visibility="gone"
+        android:background="@color/red_d3"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/view_top"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:background="@color/green_1c"
+        android:layout_height="100dp" />
+
+    <View
+        android:id="@+id/view_right"
+        android:layout_width="100dp"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:background="@color/yellow_78"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/view_bottom"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue_0a"
+        android:layout_height="100dp" />
+
+    <View
+        android:id="@+id/view_center"
+        android:layout_centerInParent="true"
+        android:background="@drawable/so_redf8_45"
+        android:layout_width="10dp"
+        android:visibility="gone"
+        android:layout_height="200dp" />
+
+    <com.summer.demo.view.CanvasAnimView
+        android:id="@+id/canvas_anim"
+        android:layout_centerInParent="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <View
+        android:id="@+id/view_rotate"
+        android:layout_below="@id/canvas_anim"
+        android:layout_width="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="100dp"
+        android:background="@drawable/drag"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/iamfather"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/transparent"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/so_white5"
+        android:gravity="left" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:textColor="@color/grey_4a"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+        <View
+            android:id="@+id/line"
+            style="@style/line_horizontal"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_title"
+            android:background="#DADADE" />
+
+        <LinearLayout
+            android:id="@+id/ll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            android:layout_margin="10dp"
+            android:minHeight="80dp"
+            android:orientation="vertical"
+            android:textColor="@color/black" >
+
+            <EditText
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:maxHeight="300dp"
+                android:background="@null"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            style="@style/line_horizontal"
+            android:layout_below="@+id/ll_layout"
+            android:background="#DADADE"
+            android:layout_marginTop="10dip" />
+        <!-- 显示私聊与访问主页 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/view"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/turn_white_lighter_grey_bottom5"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:textColor="@color/grey_c5"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                style="@style/line_vertical"
+                android:layout_marginBottom="0dp"
+                android:background="#DADADE"
+                android:layout_marginTop="0dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_sure"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/turn_white_lighter_grey_bottom5"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_sure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sure"
+                    android:textColor="@color/yellow_ff9"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

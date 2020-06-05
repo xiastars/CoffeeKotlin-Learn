@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--不需要哪边就把这边隐藏掉 -->
+    <item android:top="-2dp">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <!-- 设置圆角半径 -->
+            <corners android:radius="@dimen/size_5" />
+            <!--设置填充颜色 -->
+            <solid android:color="@color/white" />
+            <!--设置边框颜色与宽度 -->
+            <stroke
+                android:width="1dp"
+                android:color="@color/red_d3" />
+
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:id="@+id/ambilwarna_viewContainer"
+	android:padding="8dp"
+	android:background="@drawable/so_white5"
+	android:clipToPadding="false"
+	android:layout_gravity="center">
+	<com.summer.demo.ui.module.colorpicker.ColorPanelView
+		android:id="@+id/ambilwarna_viewSatBri"
+		android:layout_width="match_parent"
+		android:layout_toLeftOf="@+id/ambilwarna_viewHue"
+		android:layout_height="240dp"
+	 />
+	<ImageView
+		android:id="@+id/ambilwarna_viewHue"
+		android:layout_width="30dp"
+		android:layout_height="240dp"
+		android:layout_alignParentRight="true"
+		android:layout_marginLeft="8dp"
+		android:background="@color/red_d3"
+		android:scaleType="fitXY"
+	/>
+	<ImageView
+		android:id="@+id/ambilwarna_target"
+		android:layout_width="15dp"
+		android:layout_height="15dp"
+		android:background="@drawable/ic_select_circle"
+		android:scaleType="matrix"
+	/>
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/ambilwarna_state"
+		android:orientation="horizontal"
+		android:layout_marginTop="8dp"
+		android:layout_below="@id/ambilwarna_viewSatBri"
+		android:gravity="center"
+		android:layout_centerHorizontal="true"
+	>
+	</LinearLayout>
+
+	<View
+		android:id="@+id/view"
+		style="@style/line_horizontal"
+		android:layout_below="@+id/ambilwarna_state"
+		android:background="#DADADE"
+		android:layout_marginTop="10dip" />
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="45dp"
+		android:layout_below="@+id/view"
+		android:orientation="horizontal" >
+
+		<LinearLayout
+			android:id="@+id/ll_cancel"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:background="@drawable/turn_white_lighter_grey_bottom5"
+			android:clickable="true"
+			android:gravity="center"
+			android:orientation="vertical" >
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/cancel"
+				android:textColor="@color/grey_c6"
+				android:textSize="16sp" />
+		</LinearLayout>
+
+		<View
+			style="@style/line_vertical"
+			android:layout_marginBottom="0dp"
+			android:background="#DADADE"
+			android:layout_marginTop="0dp" />
+
+		<LinearLayout
+			android:id="@+id/ll_sure"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:background="@drawable/turn_white_lighter_grey_bottom5"
+			android:clickable="true"
+			android:gravity="center"
+			android:orientation="vertical" >
+
+			<TextView
+				android:id="@+id/tv_sure"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/sure"
+				android:textColor="@color/blue_04"
+				android:textSize="16sp" />
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

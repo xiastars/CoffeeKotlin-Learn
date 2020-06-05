@@ -1,0 +1,72 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="full-screen" content="yes">
+    <title></title>
+    <script type="text/javascript">
+   		var searchStr = location.search;
+		searchStr = searchStr.substr(1);
+		var searchs = searchStr.split("&");
+		var failUrl = searchs[0].split("=");
+    	function onload() {
+	    	window.location.href=failUrl[1];	
+		}
+    </script>
+	
+    <style type="text/css">
+        p{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            background-color:#eaecef;
+        }
+        .horizontal-box{
+            text-align:center;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .errDesc{
+            text-align:center;
+            font-size:16px;
+            font-color:black;
+        }
+        .wrap{
+            margin:0 auto;
+            padding-top:25px;
+			padding-bottom:50px;
+        }
+        .f20{
+            font-size:20px;
+			color:#b2b2b2
+        }
+        a{
+            text-decoration:none;
+            color:#248BF2;
+        }
+		a:visited{
+            text-decoration:none;
+            color:#248BF2;
+        }
+    </style>
+</head>
+<body>
+<table border="0" style="height:100%;width:100%;valign:middle">
+<tr>
+  <td>
+	<div id="content" align="center">
+		<img id="img0" style="height:160px; width:160px" src="file:///android_asset/errorpage/server.png"/>
+		<div class="wrap">
+			<div class="errDesc">网络不给力,请重新加载</div>
+			<br>
+			<a id="pageRefresh" href="javascript:onload()">重新加载</a>
+		</div>
+	</div>
+  </td>
+</tr>
+</table>
+</body>
+</html>

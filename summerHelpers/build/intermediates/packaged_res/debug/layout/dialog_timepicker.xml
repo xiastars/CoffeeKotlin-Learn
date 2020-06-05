@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/so_white5" >
+        
+        <TextView 
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:textColor="@color/grey_57"
+            android:textSize="23sp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"/>
+        <View 
+            android:id="@+id/line"
+            android:layout_below="@id/tv_time"
+            android:background="@color/grey_57"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>   
+       <LinearLayout
+           android:id="@+id/ll_picker"
+           android:layout_below="@id/line"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:layout_width="match_parent" 
+           android:orientation="vertical">
+            <com.summer.helper.view.DatePicker
+		      android:id="@+id/datePicker"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content" />
+       </LinearLayout>
+       <View
+           android:id="@+id/divider1"
+           android:background="#44000000"
+           android:layout_below="@id/ll_picker"
+           android:layout_height="0.5dp"
+           android:layout_width="match_parent" />
+         <TextView 
+            android:id="@+id/tv_finish"
+            android:layout_below="@id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:text="完成"
+            android:background="@drawable/turn_white_lighter_grey_bottom5"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

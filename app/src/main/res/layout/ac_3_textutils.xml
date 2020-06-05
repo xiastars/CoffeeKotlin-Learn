@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <ScrollView 
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     style="@style/both_match" >
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+   
+    
+    <TextView
+        android:id="@+id/three_text1"
+        android:text="You are the one and only"
+        style="@style/both_wrap_three" />
+    <View style="@style/divide_line_f"/>
+    <TextView
+        android:id="@+id/three_text2"
+        style="@style/both_wrap_three" />
+    <View style="@style/divide_line_f"/>
+    <TextView
+        android:id="@+id/three_text3"
+        style="@style/both_wrap_three"/>
+    <View style="@style/divide_line_f"/>
+    <TextView
+        android:id="@+id/three_text4"
+        style="@style/both_wrap_three"/>
+    
+    <View style="@style/divide_line_f"/>
+    <TextView
+        android:id="@+id/three_text5"
+        style="@style/both_wrap_three" />
+    
+    <View style="@style/divide_line_f"/>
+    <TextView
+        android:id="@+id/three_text6"
+        style="@style/both_wrap_three"/>
+    
+    <View style="@style/divide_line_f"/>
+    <TextView
+        android:id="@+id/three_text7"
+       style="@style/both_wrap_three" />
+    
+    <View style="@style/divide_line_f"/>
+    <TextView
+        android:id="@+id/three_text8"
+       style="@style/both_wrap_three" />
+    
+    <View style="@style/divide_line_f"/>
+    <TextView
+        android:id="@+id/three_text9"
+       style="@style/both_wrap_three" />
+    
+    <View style="@style/divide_line_f"/>
+    <TextView
+        android:id="@+id/three_text10"
+        style="@style/both_wrap_three" />
+    
+    
+        
+  
+    
+
+</LinearLayout>
+      </ScrollView>

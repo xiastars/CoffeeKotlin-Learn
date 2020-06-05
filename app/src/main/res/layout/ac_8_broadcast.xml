@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <Button
+        android:id="@+id/button"
+        style="@style/both_wrap"
+        android:text="点了之后，去上一个案例看看，有一个Dialog弹出了"
+        android:padding="10dp"
+        android:layout_margin="20dp"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

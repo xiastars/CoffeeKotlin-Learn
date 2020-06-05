@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_parent"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/size_10"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/item_left_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/size_20">
+
+        <com.summer.helper.view.RoundAngleImageView
+            android:id="@+id/iv_book_icon"
+            android:layout_width="@dimen/size_140"
+            android:layout_height="@dimen/size_200"
+            android:scaleType="fitXY"
+            app:border_color="@color/purple_2f"
+            app:border_width="@dimen/size_3"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_200"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/size_20"
+        android:layout_toRightOf="@+id/item_left_rl"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_book_name"
+            android:layout_marginTop="@dimen/size_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textStyle="bold"
+            android:textColor="@color/purple_2f"
+            android:textSize="@dimen/text_30" />
+
+        <TextView
+            android:id="@+id/tv_grade"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/purple_8d"
+            android:textSize="@dimen/text_24" />
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/purple_8d"
+            android:textSize="@dimen/text_18" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/purple_8d"
+            android:textSize="@dimen/text_18" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_download"
+        android:layout_width="@dimen/size_150"
+        android:layout_marginRight="@dimen/size_30"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_height="@dimen/size_45" >
+
+        <ProgressBar
+            android:id="@+id/load_pb"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_45"
+            android:layout_centerVertical="true"
+            android:progressDrawable="@drawable/progress_downloading"
+            android:max="100"
+            android:progress="0" />
+        <TextView
+            android:id="@+id/load_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="下载"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_below="@id/item_left_rl"
+        android:layout_marginTop="@dimen/size_35"
+        android:layout_marginLeft="@dimen/size_20"
+        android:background="@color/purple_db"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1" />
+
+</RelativeLayout>

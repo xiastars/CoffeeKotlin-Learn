@@ -1,0 +1,42 @@
+<com.summer.demo.module.view.SlidingMenu xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/menu"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<com.summer.demo.module.view.CustomViewBehind
+		android:id="@+id/above"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+
+		<FrameLayout
+			android:id="@+id/ll_menu"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/white" />
+	</com.summer.demo.module.view.CustomViewBehind>
+
+	<com.summer.demo.module.view.CustomViewAbove
+		android:id="@+id/behind"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+
+		<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+
+			<FrameLayout
+				android:id="@+id/ll_home"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@color/white" />
+
+			<View
+				android:id="@+id/view_bg"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" />
+		</RelativeLayout>
+
+
+	</com.summer.demo.module.view.CustomViewAbove>
+
+</com.summer.demo.module.view.SlidingMenu>

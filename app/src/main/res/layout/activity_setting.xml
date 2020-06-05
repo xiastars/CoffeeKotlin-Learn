@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:id="@+id/mine_set_phone"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_marginTop="10dp"
+		android:background="@color/white"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:layout_height="60dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:text="@string/mine_set_phone"
+			android:textSize="16sp"
+			android:textColor="@color/grey_4a"
+			android:layout_marginLeft="20dp"
+			android:gravity="center|left"
+			android:layout_height="40dp" />
+
+		<TextView
+			android:id="@+id/tv_mine_phone"
+			android:layout_width="match_parent"
+			android:textSize="16sp"
+			android:textColor="#B3B0BB"
+			android:text=""
+			android:drawableRight="@drawable/ic_right"
+			android:layout_marginRight="20dp"
+			android:drawablePadding="@dimen/lay_12"
+			android:gravity="center|right"
+			android:background="@color/transparent"
+			android:layout_height="40dp" />
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/mine_set_push"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_marginTop="@dimen/lay_12"
+		android:background="@color/white"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:layout_height="60dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:text="@string/mine_set_push_msg"
+			android:textSize="16sp"
+			android:textColor="@color/grey_4a"
+			android:layout_marginLeft="20dp"
+			android:gravity="center|left"
+			android:layout_height="40dp" />
+
+		<TextView
+			android:id="@+id/tv_mine_push"
+			android:layout_width="match_parent"
+			android:textSize="16sp"
+			android:textColor="#B3B0BB"
+			android:text=""
+			android:drawableRight="@drawable/ic_right"
+			android:layout_marginRight="20dp"
+			android:drawablePadding="@dimen/lay_12"
+			android:gravity="center|right"
+			android:background="@color/transparent"
+			android:layout_height="40dp" />
+
+	</LinearLayout>
+
+
+	<LinearLayout
+		android:id="@+id/mine_set_clear"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_marginTop="@dimen/lay_12"
+		android:background="@color/white"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:layout_height="60dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:text="@string/mine_set_clear"
+			android:textSize="16sp"
+			android:textColor="@color/grey_4a"
+			android:layout_marginLeft="20dp"
+			android:gravity="center|left"
+			android:layout_height="40dp" />
+
+		<TextView
+			android:id="@+id/tv_mine_clear"
+			android:layout_width="match_parent"
+			android:textSize="16sp"
+			android:textColor="#B3B0BB"
+			android:text=""
+			android:drawableRight="@drawable/ic_right"
+			android:layout_marginRight="20dp"
+			android:drawablePadding="@dimen/lay_12"
+			android:gravity="center|right"
+			android:background="@color/transparent"
+			android:layout_height="40dp" />
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/ll_about"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_marginTop="10dp"
+		android:background="@color/white"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:layout_height="60dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:text="@string/my_about"
+			android:textSize="16sp"
+			android:textColor="@color/grey_4a"
+			android:layout_marginLeft="20dp"
+			android:gravity="center|left"
+			android:layout_height="40dp" />
+
+		<TextView
+			android:layout_width="match_parent"
+			android:textSize="16sp"
+			android:textColor="#B3B0BB"
+			android:text=""
+			android:drawableRight="@drawable/ic_right"
+			android:layout_marginRight="20dp"
+			android:drawablePadding="@dimen/lay_12"
+			android:gravity="center|right"
+			android:background="@color/transparent"
+			android:layout_height="40dp" />
+
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/mine_set_logout"
+		android:layout_width="match_parent"
+		android:text="@string/mine_set_logout"
+		android:background="@color/white"
+		android:gravity="center"
+		android:textColor="#F15555"
+		android:textSize="16sp"
+		android:layout_height="60dp" />
+
+
+</LinearLayout>

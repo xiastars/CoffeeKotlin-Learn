@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="计算机各层网络协议 协议数据单元PDU（Protocol Data Unit）是指对等层次之间传递的数据单位 物理层 典型设备：中继器、集线器 使用了光纤、 同轴电缆、双绞线…… 中间设备：中继器、集" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>计算机网络---五层体系结构 - Nemo&amp; - 博客园</title>
+
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=sqi5FxOybx6gjGoG6Zfy1wD-0AwznLNLYOVx7Y9tIN0" />
+    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=HZYPsxMVafXureV358baXMkW01jE9FdDO18Qqm0WPVk" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/blknemo/custom.css?v=zW&#x2B;AxDhV&#x2B;t0K/nQxqtZuQ7so/jA=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=YLOkrTk5E7_pa0CoJzjGN-4x4Qir3rlm737NcHZyQvQ" />
+
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/blknemo/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/blknemo/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/blknemo/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=4QhAuTQQoOm-lM3IPePkpoT4bSJvxH-elPKwr4VYOAI"></script>
+    <script>
+        var currentBlogId = 477168;
+        var currentBlogApp = 'blknemo';
+        var cb_enable_mathjax = true;
+        var isLogined = false;
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true }, TeX: { equationNumbers: { autoNumber: ['AMS'], useLabelIds: true }, extensions: ['extpfeil.js', 'mediawiki-texvc.js'], Macros: {bm: "\\boldsymbol"}
+        }, 'HTML-CSS': { linebreaks: { automatic: true } }, SVG: { linebreaks: { automatic: true } } });
+    </script>
+    <script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</head>
+
+<body>
+
+    <!--done-->
+    <div id="home">
+        <!--end: header 头部 -->
+        版权声明：转自博客园；作者：Nemo&;原文链接：https://www.cnblogs.com/blknemo/p/10079644.html
+
+        <div id="main">
+            <div id="mainContent">
+                <div class="forFlow">
+                    <div id="post_detail">
+                        <!--done-->
+                        <div id="topics">
+                            <div class="post">
+
+                                <div class="clear"></div>
+                                <div class="postBody">
+
+                                    <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+                                        <h2 id="计算机各层网络协议">计算机各层网络协议</h2>
+                                        <blockquote>
+                                            <p>协议数据单元PDU（Protocol Data Unit）是指对等层次之间传递的数据单位</p>
+                                        </blockquote>
+                                        <h3 id="物理层">物理层</h3>
+                                        <ul>
+                                            <li>典型设备：中继器、集线器<br /> 使用了光纤、 同轴电缆、双绞线……</li>
+                                            <li>中间设备：中继器、集线器
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>中继器</strong><br /> 中继器（Repeater）又被称为转发器或放大器，执行物理层协议，负责第一层（物理层）的数据中继，实现电气信号的“再生”。用于互连两个相同类型的网段，主要功能是延伸网段和改变传输媒体，从而实现信息位的转发。它本身不执行信号的过滤功能。
+                                                        </p>
+                                                    </li>
+                                                    <li><strong>集线器</strong><br /> 集线器（HUB）是一种典型或称为特殊的转发器。它的作用可以简单的理解为将一些机器连接起来组成一个局域网。它不具有智能处理能力，处理的数据只是电流而已，它采用共享带宽的工作方式，附接端口的所有计算机采用CSMA/CD方式竞争带宽的使用，任一时刻只能由两台计算机之间进行通信。
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>数据单元：数据位（bit）binary digit 二进制数据的缩写</li>
+                                            <li>网络协议：无</li>
+                                        </ul>
+                                        <h3 id="数据链路层">数据链路层</h3>
+                                        <ul>
+                                            <li>典型设备：网卡、网桥、交换机</li>
+                                            <li>中间设备：网桥、交换机
+                                                <ul>
+                                                    <li><strong>网桥</strong><br /> 网桥（Gate Bridge）负责第二层（数据链路层）的数据中继。互连两个独立的、仅在低两层实现上有差异的子网。</li>
+                                                    <li><strong>交换机</strong><br /> 实质上是一个多接口的网桥。
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>数据单元：数据帧 （Frame）</li>
+                                            <li>网络协议：
+                                                <ul>
+                                                    <li><strong>ARQ</strong>（Automatic Repeat-reQuest ）自动重传请求协议，错误纠正协议之一，包括停止等待ARQ 协议和连续ARQ 协议，错误侦测、正面确认、逾时重传与负面确认继以重传等机制。</li>
+                                                    <li>
+                                                        <p><strong>SW</strong>（stop-and-wait）停止等待协议。停止等待就是每发送完一个分组就停止发送，等待对方的确认。在收到确认后再发送下一个分组。用于通信系统中，两个相连的设备相互发送信息时使用，以确保信息不因丢包或包乱序而丢失，是最简单的自动重传请求方法。</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>CSMA/CD</strong>(Carrrier Sense Multiple Access with Collision Detection)载波监听多点接入/碰撞检测协议。总线型网络，协议的实质是载波监听和碰撞检测。载波监听即发数据前先检测总线上是否有其他计算机在发送数据，如暂时不发数据，避免碰撞。碰撞检测为计算机边发送数据边检测信道上的信号电压大小。</p>
+                                                    </li>
+                                                    <li><strong>PPP</strong>(Point-to-Ponit Protocol)点对点协议面向字节，由三部分组成：
+                                                        <ul>
+                                                            <li>一个将IP 数据报封装到串行链路的方法；</li>
+                                                            <li>一个用于建立、配置和测试数据链路连接的链路控制协议LCP；</li>
+                                                            <li>一套网络控制协议NCP。</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>HDLC</strong> （High-Level Data Link Control ）高级数据链路控制同步网上传输数据、面向比特的数据链路层协议。</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>ATM</strong> （Asynchronous Transfer Mode ）异步传递方式，建立在电路交换和分组交换的基础上的一种面向连接的快速分组交换技术。 “异步”是指将ATM 信元“异步插入”到同步的 SDH 比特流中。如同步插入则用户在每帧中所占的时隙相对位置固定不变。“同步”是指网络中各链路上的比特流都是受同一非常精确的主时钟的控制。Wi-Fi 、WiMAX
+                                                            、DTM 、令牌环、以太网、FDDI 、帧中继、 GPRS 、 EVDO 、HSPA 、L2TP 、ISDN。</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h3 id="网络层">网络层</h3>
+                                        <ul>
+                                            <li>典型设备：路由器、防火墙、多层交换机</li>
+                                            <li>中间设备：路由器
+                                                <ul>
+                                                    <li><strong>路由器</strong><br /> 路由器（Router）负责第三层（网络层）的数据中继。它能理解数据中的IP地址，如果它接收到一个数据包，就检查其中的IP地址，如果目标地址是本地网络的就不理会，如果是其他网络的，就将数据包转发出本地网络。它的作用在于连接相同或不同类型网络，并且能找到网络中数据传输最合适的路径即路由选择。
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>数据单元：数据包（Packet）</li>
+                                            <li>网络协议：
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>IP</strong> (IPv4 · IPv6) (Internet Protocol) 网络之间互连的协议</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>ARP</strong> (Address Resolution Protocol) 即地址解析协议，实现通过IP 地址得 知其物理地址。</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>RARP</strong> (Reverse Address Resolution Protocol)反向地址转换协议允许局域 网的物理机器从网关服务器的 ARP 表或者缓存上请求其 IP地址。</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>ICMP</strong> (Internet Control Message Protocol ）Internet 控制报文协议。它是TCP/IP 协议族的一个子协议，用于在IP 主机、路由器之间传递控制消息。</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>ICMPv6</strong> (Internet Control Managemet Protocol Version 6)互联网控制信息协议版本六。ICMPv6为了与IPv6配套使用而开发的互联网控制信息协议。与IPv4一样，IPv6也需要使用ICMP，旧版本的ICMP不能满足IPv6全部要求，因此开发了新版本的ICMP，称为ICMPv6。</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>IGMP</strong> (Internet Group Management Protocol) Internet 组管理协议,是因特 网协议家族中的一个组播协议，用于 IP 主机向任一个直接相邻的路由器报 告他们的组成员情况。</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>RIP</strong> (Router information protocol) 路由信息协议是一种在网关与主机之间交换路由选择信息的标准。</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>OSPF</strong> (Open Shortest Path Firs)开放式最短路径优先,分布式链路状态协议。</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>BGP</strong>（Border Gateway Protocol ）边界网关协议，用来连接Internet 上独立系统的路由选择协议.采用路径向量路由选择协议。</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h3 id="运输层">运输层</h3>
+                                        <ul>
+                                            <li>典型设备：进程和端口</li>
+                                            <li>中间设备：网关
+                                                <ul>
+                                                    <li><strong>网关</strong><br /> 网关（Gateway）负责第三层（网络层）以上的数据中继，实现不同体系结构的网络协议转换，它通常采用软件的方法实现，并且与特定的应用服务一一对应。比如：OSI的文件传输服务FTAM和TCP/IP的文件传输服务FTP，尽管二者都是文件传输但是由于所执行的协议不同不能直接进行通信，而需要网关将两个文件传输系统互连，达到相互进行文件传输的目的。
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>数据单元：数据段 （Segment）</li>
+                                            <li>网络协议：
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>TCP</strong> （Transmission Control Protocol ）传输控制协议，提供可靠的面向连接的服务，传输数据前须先建立连接，结束后释放。可靠的全双工信道。可靠、有序、无丢失、不重复。</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>UDP</strong> (User Datagram Protocol ）用户数据报协议，发送数据前无需建立连接，不使用拥塞控制，不保证可靠交付，最大努力交付。</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h3 id="应用层">应用层</h3>
+                                        <ul>
+                                            <li>典型设备:应用程序，如FTP，SMTP ，HTTP)</li>
+                                            <li>中间设备：网关
+                                                <ul>
+                                                    <li><strong>网关</strong><br /> 网关（Gateway）负责第三层（网络层）以上的数据中继，实现不同体系结构的网络协议转换，它通常采用软件的方法实现，并且与特定的应用服务一一对应。比如：OSI的文件传输服务FTAM和TCP/IP的文件传输服务FTP，尽管二者都是文件传输但是由于所执行的协议不同不能直接进行通信，而需要网关将两个文件传输系统互连，达到相互进行文件传输的目的。
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>数据单元：报文（message）</li>
+                                            <li>网络协议：
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>DHCP</strong>(Dynamic Host Configuration Protocol)动态主机分配协议，使用 UDP 协议工作，主要有两个用途：给内部网络或网络服务供应商自动分配 IP 地址，给用户或者内部网络管理员作为对所有计算机作中央管理的手段。实现即插即用连网。</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>DNS</strong> （Domain Name System ）域名解析
+                                                            <端口号53>
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>FTP</strong> （File Transfer Protocol ）文件传输协议
+                                                            <端口号21>，减少或消除不同操作系统下处理文件的不兼容性。</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>HTTP</strong> （Hypertext Transfer Protocol ）超文本传输协议 &lt;端口号 80&gt;， 面向事务的应用层协议。</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>POP3</strong> (Post Office Protocol 3) 即邮局协议的第3 个版本，用于接受邮件。</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>SMTP</strong> （Simple Mail Transfer Protocol ）简单邮件传输协议
+                                                            <端口号25> 用于发送邮件。</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>SSH</strong> （Secure Shell ）安全外壳协议</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>TELNET</strong>（Telnet） 远程登录协议
+                                                            <端口号23>
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p><img src="https://img2018.cnblogs.com/blog/1542615/201812/1542615-20181206212822042-1363855992.png" /></p>
+                                        <h2 id="计算机网络通信方式">计算机网络通信方式</h2>
+                                        <blockquote>
+                                            <p>为了实现跨越互联网的，主机 A 的进程 P1，和主机 B 的进程 P2 之间的通信，我们逐层把这个任务交给 TCP/IP 协议栈。</p>
+                                        </blockquote>
+                                        <ul>
+                                            <li><strong>运输层</strong>：“如果有人能帮我把数据从某个网络中的机器 A 搬到另一个网络中的机器 B，我就可以搞定这个任务，因为<strong>我知道不同的数据应该交给机器上的哪个进程。</strong>”</li>
+                                            <li><strong>网络层</strong>：“如果有人能帮我把数据从局域网中直接相连的一台机器搬到另一台机器，我就可以把数据从一个网络搬到另一个网络，因为<strong>我知道路线怎么走，要经过哪些节点。</strong>”</li>
+                                            <li><strong>数据链路层</strong>：“<strong>我知道怎样在局域网中搬数据</strong>，还能用 CSMA/CD 协议协调工作，还能用 CRC32 校验发送的数据和接收的数据是一致的，blabla... But，我只是说说，我不干苦力活。”</li>
+                                            <li><strong>物理层</strong>：“楼上的大爷们发话了，兄弟们上。”</li>
+                                        </ul>
+
+                                    </div>
+                                    <div id="MySignature"></div>
+                                    <div class="clear"></div>
+                                    <div id="blog_post_info_block">
+                                        <div id="blog_post_info"></div>
+                                        <div class="clear"></div>
+                                        <div id="post_next_prev"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <!--end: topics 文章、评论容器-->
+                    </div>
+                    <script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+                    <script>
+                        markdown_highlight();
+                    </script>
+
+                    <a name="!comments"></a>
+                    <div id="blog-comments-placeholder"></div>
+
+                </div>
+                <!--end: forFlow -->
+            </div>
+            <!--end: mainContent 主体内容容器-->
+
+
+            <!--end: sideBar 侧边栏容器 -->
+            <div class="clear"></div>
+        </div>
+
+        <!--end: footer -->
+    </div>
+    <!--end: home 自定义的最大容器 -->
+
+
+
+
+
+
+    <div>
+
+    </div>
+    </div>
+</body>
+
+</html>

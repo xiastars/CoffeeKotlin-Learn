@@ -1,0 +1,114 @@
+在前章中，我们学会创建了一个类，也学会new一个对象，我们创建了一个名为dolores的女朋友对象，时光飞逝，技术的发展瞬息万变，由于一些新技术的突破，我们需要升级这个机器人女友了。但是呢，我们不想推翻以前的重来，想在以前的基础上进行改造，比如，以前Girlfriend的许多属性现在也用得着，那么怎么办呢？考虑到这样，我们把这一代的Girlfriend作为父类，再创建一个名为Dolores的子类，写法如下：
+```
+public Dolores extends Girlfriend{
+}
+```
+所谓继承，就是你有的东西，我都要有。不信我们试一试，我们创建一个DemoTest的测试类：
+```
+public class DemoTest {
+
+    public static void main(String[] args) {
+        Dolores dolores = new Dolores();
+        String content = dolores.getDesc();
+        int age = dolores.getHeight();
+        dolores.setWeight(100);
+    }
+}
+```
+你看，Girlfriend的属性，Dolores都可以操作，但是真的吗，回到Girlfriend类，我们稍微修改点东西：
+```
+private void setHeight(int height) {
+      this.height = height;
+}
+```
+现在回到DemoTest测试类，我们发现报错了。
+
+一代机器人对二代说，复制我可以，但是有些属性，我是标记了private属性的，private，私有的，你继承不了。
+
+在这里简单说一下修饰符，常用的修饰符有三个，private，public，protected
+
+* public 意为公开，最为常用，访问权限最高，相当于外衣，任何人都看得到
+* private 意为私有，别人都看不到，相当于心里的秘密
+* protected意为保护的，可以理解为家族传承的，你继承我，才能调用这个方法，
+下面我们来作一个测试，把子类Dolores与DemoTest放在同一个包，把父类Girlfriend放在另外一个包，然后，我们在Girlfriend里定义一个方法，如下：
+```
+protected void walk(){
+
+}
+```
+
+我们给Girlfriend定义了一个走路的方法，而且指定为protected类型，然后我们在DemoTest里调用这个方法：
+```
+Dolores dos = new Dolores();
+dos.walk();
+Girlfriend dolores = new Girlfriend();
+dolores.walk();
+```
+现在发现，dolores.walk()这行报错了，提示是这样的：
+The method walk() from the type Girlfriend is not visible//这个方法不可见
+原来，这个protected修饰符声明了，我的方法，必须是我这个圈子里的人才能看到。
+接下来，我们测试一下子类与父类的调用关系，我们在Girlfriend与Dolores的构造器下分别打印它们的类名，比如下Dolores类下：
+```
+public Dolores(){
+   System.out.println("Dolores");
+}
+```
+在DemoTest的main方法里，我们直接new一个Dolores，如下：
+```
+public static void main(String[] args) {
+   new Dolores();
+}
+```
+然后看一下Console的打印，打印如下：
+Girlfriend
+Dolores
+说明了实例化一个Dolores对象时，先调用了父类的构造器，然后再调用了自己的构造器。假如，我们调用一个有参数的构造器会怎样呢？在Girlfriend类里，我们创建了一个有参数的构造器：
+```
+public Girlfriend(int s){
+   System.out.println("Girlfriend");
+}
+```
+然后，我们去Dolores类也创建一个：
+```
+public Dolores(int s ){
+   System.out.println("Dolores");
+}
+```
+咦，报错了。这里要说一下：
+当父类创建了一个带有参数的构造器，子类就无法自定义一个有参数的构造器了，除非，你在每一个构造器里调用super这个方法，super表示调用父类的构造器
+正确写法：
+```
+public Dolores(){
+   super(2);
+   System.out.println("Dolores");
+}
+```
+我们继续来测试方法的继承，在Girlfriend里，我们在walk方法里加一个打印信息，如下：
+```
+public void walk(){
+   System.out.println("走了一步");
+}
+```
+现在，我们设定Dolores是一个双腿残疾的女孩，她不能走路，一开始走路就摔倒，但是Dolores已经继承了Girlfriend，包括walk()这个方法，现在怎么办呢？我们只好重好这个方法，一般重写一个方法，需要在方法上加一个注释，表示这是一个重写的方法，在Dolores类里，我们这样写：
+```
+@Override
+public void walk() {
+   System.out.println("摔跤了");
+}
+```
+在DemoTest 的main方法里，我们调用一下Dolores的walk方法，如下：
+new Dolores().walk();
+然后看打印结果：
+摔跤了
+结果如我们所愿。但是我们发现这样处理比较生硬，我们想让dolores走一步，再摔跤，这样更真实一些，也就是说，我们先让dolores调用父类的walk方法，再执行自己的walk方法，这下，又用到了super这个关键字，我们修改一下Dolores的walk方法，如下：
+```
+@Override
+public void walk() {
+   super.walk();
+   System.out.println("摔跤了");
+}
+```
+打印结果：
+走了一步
+摔跤了
+这下就完美了。
