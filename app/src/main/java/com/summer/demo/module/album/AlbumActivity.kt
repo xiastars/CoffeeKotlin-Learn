@@ -56,10 +56,8 @@ class AlbumActivity : BaseActivity(), OnClickListener {
     internal var broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             gridImageAdapter!!.notifyDataSetChanged()
-
         }
     }
-
 
     /**
      * 完成

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CoffeeKotlin-Learn.iml" filepath="$PROJECT_DIR$/CoffeeKotlin-Learn.iml" />
-      <module fileurl="file://$PROJECT_DIR$/FFmpegAndroid/FFmpegAndroid.iml" filepath="$PROJECT_DIR$/FFmpegAndroid/FFmpegAndroid.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/summerHelpers/summerHelpers.iml" filepath="$PROJECT_DIR$/summerHelpers/summerHelpers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CoffeeKotlin-Learn.iml" filepath="$PROJECT_DIR$/CoffeeKotlin-Learn.iml" group="CoffeeKotlin-Learn" />
+      <module fileurl="file://$PROJECT_DIR$/FFmpegAndroid/FFmpegAndroid.iml" filepath="$PROJECT_DIR$/FFmpegAndroid/FFmpegAndroid.iml" group="CoffeeKotlin-Learn/FFmpegAndroid" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="CoffeeKotlin-Learn/app" />
+      <module fileurl="file://$PROJECT_DIR$/summerHelpers/summerHelpers.iml" filepath="$PROJECT_DIR$/summerHelpers/summerHelpers.iml" group="CoffeeKotlin-Learn/summerHelpers" />
     </modules>
   </component>
 </project>
